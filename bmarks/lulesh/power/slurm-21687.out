@@ -1,0 +1,26 @@
+srun: error: rzmerl20: task 0: Aborted (core dumped)
+srun: First task exited 30s ago
+srun: tasks 1-7: running
+srun: task 0: exited abnormally
+srun: Terminating job step 21687.2
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+srun: error: rzmerl20: task 0: Exited with exit code 255
+srun: First task exited 30s ago
+srun: tasks 1-7: running
+srun: task 0: exited abnormally
+srun: Terminating job step 21687.5
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+srun: error: rzmerl20: task 0: Exited with exit code 255
+srun: First task exited 30s ago
+srun: tasks 1-7: running
+srun: task 0: exited abnormally
+srun: Terminating job step 21687.8
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+srun: error: rzmerl20: task 0: Exited with exit code 255
+srun: First task exited 30s ago
+srun: tasks 1-7: running
+srun: task 0: exited abnormally
+srun: Terminating job step 21687.11
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+slurmd[rzmerl20]: *** JOB 21687 CANCELLED AT 2012-07-27T19:34:57 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.

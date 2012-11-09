@@ -1,0 +1,953 @@
+rm -f *.o libmsr.so
+gcc -fPIC -Wall -DARCH_SANDY_BRIDGE -DPKG_PERF_STATUS_AVAILABLE  -DARCH_062D -O2    -c -o msr_core.o msr_core.c
+gcc -fPIC -Wall -DARCH_SANDY_BRIDGE -DPKG_PERF_STATUS_AVAILABLE  -DARCH_062D -O2    -c -o msr_rapl.o msr_rapl.c
+gcc -fPIC -Wall -DARCH_SANDY_BRIDGE -DPKG_PERF_STATUS_AVAILABLE  -DARCH_062D -O2    -c -o blr_util.o blr_util.c
+gcc -fPIC -Wall -DARCH_SANDY_BRIDGE -DPKG_PERF_STATUS_AVAILABLE  -DARCH_062D -O2    -c -o msr_turbo.o msr_turbo.c
+gcc -fPIC -Wall -DARCH_SANDY_BRIDGE -DPKG_PERF_STATUS_AVAILABLE  -DARCH_062D -O2    -c -o msr_pebs.o msr_pebs.c
+gcc -fPIC -Wall -DARCH_SANDY_BRIDGE -DPKG_PERF_STATUS_AVAILABLE  -DARCH_062D -O2    -c -o msr_opt.o msr_opt.c
+gcc -fPIC -Wall -DARCH_SANDY_BRIDGE -DPKG_PERF_STATUS_AVAILABLE  -DARCH_062D -O2    -c -o msr_clocks.o msr_clocks.c
+gcc -fPIC -Wall -DARCH_SANDY_BRIDGE -DPKG_PERF_STATUS_AVAILABLE  -DARCH_062D -O2    -c -o msr_signal.o msr_signal.c
+gcc -fPIC -shared -Wl,-soname,libmsr.so -o ./lib/libmsr.so msr_rapl.o blr_util.o msr_core.o msr_turbo.o msr_pebs.o msr_opt.o msr_clocks.o msr_signal.o
+rm -f *.o rapl.c* 
+mkdir -p ../lib
+./wrap.py -f -g -o rapl.c rapl.w
+mpicc -diag-disable 177 -diag-disable 279 -diag-disable 181 -DPIC -fPIC -I.. -DARCH_SANDY_BRIDGE -DARCH_062D -c rapl.c -o rapl.o
+mpicc -shared -Wl,-soname,librapl.so -o ../lib/librapl.so ../msr_core.o ../msr_rapl.o ../msr_turbo.o ../blr_util.o ../msr_opt.o ../msr_clocks.o rapl.o ../msr_signal.o
+rm  luleshMPI_OMP
+rm: cannot remove `luleshMPI_OMP': No such file or directory
+make: *** [clean] Error 1
+rm -f sphot bin/*.o
+make -C src -f Makefile.src
+make[1]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/sphot/src'
+mpif77 -fPIC -DPIC -nocheck -g -traceback -openmp -c -I../includes -diag-disable 177 -diag-disable 279 -diag-disable 181 -o ../bin/allocdyn.o  allocdyn.f 
+mpif77 -fPIC -DPIC -nocheck -g -traceback -openmp -c -I../includes -diag-disable 177 -diag-disable 279 -diag-disable 181 -o ../bin/copyglob.o  copyglob.f 
+mpif77 -fPIC -DPIC -nocheck -g -traceback -openmp -c -I../includes -diag-disable 177 -diag-disable 279 -diag-disable 181 -o ../bin/copypriv.o copypriv.f
+mpif77 -fPIC -DPIC -nocheck -g -traceback -openmp -c -I../includes -diag-disable 177 -diag-disable 279 -diag-disable 181 -o ../bin/copyseed.o copyseed.f
+mpif77 -fPIC -DPIC -nocheck -g -traceback -openmp -c -I../includes -diag-disable 177 -diag-disable 279 -diag-disable 181 -o ../bin/execute.o execute.f
+mpif77 -fPIC -DPIC -nocheck -g -traceback -openmp -c -I../includes -diag-disable 177 -diag-disable 279 -diag-disable 181 -o ../bin/genmesh.o genmesh.f
+mpif77 -fPIC -DPIC -nocheck -g -traceback -openmp -c -I../includes -diag-disable 177 -diag-disable 279 -diag-disable 181 -o ../bin/genxsec.o genxsec.f
+mpif77 -fPIC -DPIC -nocheck -g -traceback -openmp -c -I../includes -diag-disable 177 -diag-disable 279 -diag-disable 181 -o ../bin/interp.o interp.f
+mpif77 -fPIC -DPIC -nocheck -g -traceback -openmp -c -I../includes -diag-disable 177 -diag-disable 279 -diag-disable 181 -o ../bin/iranfeven.o iranfeven.f
+mpif77 -fPIC -DPIC -nocheck -g -traceback -openmp -c -I../includes -diag-disable 177 -diag-disable 279 -diag-disable 181 -o ../bin/iranfodd.o iranfodd.f
+mpif77 -fPIC -DPIC -nocheck -g -traceback -openmp -c -I../includes -diag-disable 177 -diag-disable 279 -diag-disable 181 -o ../bin/plnkut.o plnkut.f
+mpif77 -fPIC -DPIC -nocheck -g -traceback -openmp -c -I../includes -diag-disable 177 -diag-disable 279 -diag-disable 181 -o ../bin/pranf.o pranf.f
+mpif77 -fPIC -DPIC -nocheck -g -traceback -openmp -c -I../includes -diag-disable 177 -diag-disable 279 -diag-disable 181 -o ../bin/ranf.o ranf.f
+mpif77 -fPIC -DPIC -nocheck -g -traceback -openmp -c -I../includes -diag-disable 177 -diag-disable 279 -diag-disable 181 -o ../bin/ranfatok.o ranfatok.f
+mpif77 -fPIC -DPIC -nocheck -g -traceback -openmp -c -I../includes -diag-disable 177 -diag-disable 279 -diag-disable 181 -o ../bin/ranfk.o ranfk.f
+mpif77 -fPIC -DPIC -nocheck -g -traceback -openmp -c -I../includes -diag-disable 177 -diag-disable 279 -diag-disable 181 -o ../bin/ranfkbinary.o ranfkbinary.f
+mpif77 -fPIC -DPIC -nocheck -g -traceback -openmp -c -I../includes -diag-disable 177 -diag-disable 279 -diag-disable 181 -o ../bin/ranfmodmult.o ranfmodmult.f
+mpif77 -fPIC -DPIC -nocheck -g -traceback -openmp -c -I../includes -diag-disable 177 -diag-disable 279 -diag-disable 181 -o ../bin/rans.o rans.f
+mpif77 -fPIC -DPIC -nocheck -g -traceback -openmp -c -I../includes -diag-disable 177 -diag-disable 279 -diag-disable 181 -o ../bin/rdinput.o rdinput.f
+mpif77 -fPIC -DPIC -nocheck -g -traceback -openmp -c -I../includes -diag-disable 177 -diag-disable 279 -diag-disable 181 -o ../bin/rdopac.o rdopac.f
+mpif77 -fPIC -DPIC -nocheck -g -traceback -openmp -c -I../includes -diag-disable 177 -diag-disable 279 -diag-disable 181 -o ../bin/second.o second.f
+mpif77 -fPIC -DPIC -nocheck -g -traceback -openmp -c -I../includes -diag-disable 177 -diag-disable 279 -diag-disable 181 -o ../bin/seedranf.o seedranf.f
+mpif77 -fPIC -DPIC -nocheck -g -traceback -openmp -c -I../includes -diag-disable 177 -diag-disable 279 -diag-disable 181 -o ../bin/sphot.o sphot.f
+mpif77 -fPIC -DPIC -nocheck -g -traceback -openmp -c -I../includes -diag-disable 177 -diag-disable 279 -diag-disable 181 -o ../bin/thom.o thom.f
+mpif77 -fPIC -DPIC -nocheck -g -traceback -openmp -c -I../includes -diag-disable 177 -diag-disable 279 -diag-disable 181 -o ../bin/writeout.o writeout.f
+mpif77 -fPIC -DPIC -nocheck -g -traceback -openmp -c -I../includes -diag-disable 177 -diag-disable 279 -diag-disable 181 -o ../bin/wroutput.o wroutput.f
+mpif77 -fPIC -DPIC -nocheck -g -traceback -openmp -c -I../includes -diag-disable 177 -diag-disable 279 -diag-disable 181 -o ../bin/zonevols.o zonevols.f
+make[1]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/sphot/src'
+cd bin; \
+	mpif77 -g -openmp -traceback -diag-disable 177 -diag-disable 279 -diag-disable 181 -nocheck *.o -fPIC -DPIC -o sphot -Xlinker -rpath -Xlinker /g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -L/g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -lrapl ; \
+	mv sphot ../.
+rm -f core
+rm -f *~ */core */*~ */*.o */npbparams.h */*.obj */*.exe
+rm -f sys/setparams sys/makesuite sys/setparams.h
+   ===========================================
+   =      NAS PARALLEL BENCHMARKS 3.3        =
+   =      MPI+OpenMP Multi-Zone Versions     =
+   =      F77                                =
+   ===========================================
+
+cd SP-MZ; make CLASS=A NPROCS=16
+make[1]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/SP-MZ'
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+cc  -o setparams setparams.c -lm
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+../sys/setparams sp-mz 16 A
+mpif77 -c  -O3 -openmp -fPIC -DPIC  sp.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  initialize.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_solution.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  set_constants.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  adi.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  zone_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  x_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  ninvr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  y_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  pinvr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exch_qbc.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  z_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  tzetar.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  add.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  txinvr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  error.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  verify.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  mpi_setup.f
+cd ../common; mpif77 -c  -O3 -openmp -fPIC -DPIC  print_results.f
+cd ../common; mpif77 -c  -O3 -openmp -fPIC -DPIC  timers.f
+mpif77 -O3  -openmp  -o ../bin/sp-mz.A.16 sp.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o rhs.o zone_setup.o x_solve.o ninvr.o y_solve.o pinvr.o exch_qbc.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o mpi_setup.o ../common/print_results.o ../common/timers.o -Xlinker -rpath -Xlinker /g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -L/g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -lrapl
+make[1]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/SP-MZ'
+   ===========================================
+   =      NAS PARALLEL BENCHMARKS 3.3        =
+   =      MPI+OpenMP Multi-Zone Versions     =
+   =      F77                                =
+   ===========================================
+
+cd SP-MZ; make CLASS=C NPROCS=1
+make[1]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/SP-MZ'
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+../sys/setparams sp-mz 1 C
+mpif77 -c  -O3 -openmp -fPIC -DPIC  sp.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  initialize.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_solution.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  set_constants.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  adi.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  zone_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  x_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  ninvr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  y_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  pinvr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exch_qbc.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  z_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  tzetar.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  add.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  txinvr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  error.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  verify.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  mpi_setup.f
+mpif77 -O3  -openmp  -o ../bin/sp-mz.C.1 sp.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o rhs.o zone_setup.o x_solve.o ninvr.o y_solve.o pinvr.o exch_qbc.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o mpi_setup.o ../common/print_results.o ../common/timers.o -Xlinker -rpath -Xlinker /g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -L/g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -lrapl
+make[1]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/SP-MZ'
+   ===========================================
+   =      NAS PARALLEL BENCHMARKS 3.3        =
+   =      MPI+OpenMP Multi-Zone Versions     =
+   =      F77                                =
+   ===========================================
+
+cd SP-MZ; make CLASS=C NPROCS=2
+make[1]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/SP-MZ'
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+../sys/setparams sp-mz 2 C
+mpif77 -c  -O3 -openmp -fPIC -DPIC  sp.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  initialize.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_solution.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  set_constants.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  adi.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  zone_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  x_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  ninvr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  y_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  pinvr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exch_qbc.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  z_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  tzetar.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  add.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  txinvr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  error.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  verify.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  mpi_setup.f
+mpif77 -O3  -openmp  -o ../bin/sp-mz.C.2 sp.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o rhs.o zone_setup.o x_solve.o ninvr.o y_solve.o pinvr.o exch_qbc.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o mpi_setup.o ../common/print_results.o ../common/timers.o -Xlinker -rpath -Xlinker /g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -L/g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -lrapl
+make[1]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/SP-MZ'
+   ===========================================
+   =      NAS PARALLEL BENCHMARKS 3.3        =
+   =      MPI+OpenMP Multi-Zone Versions     =
+   =      F77                                =
+   ===========================================
+
+cd SP-MZ; make CLASS=C NPROCS=4
+make[1]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/SP-MZ'
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+../sys/setparams sp-mz 4 C
+mpif77 -c  -O3 -openmp -fPIC -DPIC  sp.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  initialize.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_solution.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  set_constants.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  adi.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  zone_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  x_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  ninvr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  y_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  pinvr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exch_qbc.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  z_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  tzetar.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  add.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  txinvr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  error.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  verify.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  mpi_setup.f
+mpif77 -O3  -openmp  -o ../bin/sp-mz.C.4 sp.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o rhs.o zone_setup.o x_solve.o ninvr.o y_solve.o pinvr.o exch_qbc.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o mpi_setup.o ../common/print_results.o ../common/timers.o -Xlinker -rpath -Xlinker /g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -L/g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -lrapl
+make[1]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/SP-MZ'
+   ===========================================
+   =      NAS PARALLEL BENCHMARKS 3.3        =
+   =      MPI+OpenMP Multi-Zone Versions     =
+   =      F77                                =
+   ===========================================
+
+cd SP-MZ; make CLASS=C NPROCS=8
+make[1]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/SP-MZ'
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+../sys/setparams sp-mz 8 C
+mpif77 -c  -O3 -openmp -fPIC -DPIC  sp.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  initialize.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_solution.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  set_constants.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  adi.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  zone_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  x_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  ninvr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  y_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  pinvr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exch_qbc.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  z_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  tzetar.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  add.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  txinvr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  error.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  verify.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  mpi_setup.f
+mpif77 -O3  -openmp  -o ../bin/sp-mz.C.8 sp.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o rhs.o zone_setup.o x_solve.o ninvr.o y_solve.o pinvr.o exch_qbc.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o mpi_setup.o ../common/print_results.o ../common/timers.o -Xlinker -rpath -Xlinker /g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -L/g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -lrapl
+make[1]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/SP-MZ'
+   ===========================================
+   =      NAS PARALLEL BENCHMARKS 3.3        =
+   =      MPI+OpenMP Multi-Zone Versions     =
+   =      F77                                =
+   ===========================================
+
+cd SP-MZ; make CLASS=C NPROCS=16
+make[1]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/SP-MZ'
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+../sys/setparams sp-mz 16 C
+mpif77 -c  -O3 -openmp -fPIC -DPIC  sp.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  initialize.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_solution.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  set_constants.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  adi.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  zone_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  x_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  ninvr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  y_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  pinvr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exch_qbc.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  z_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  tzetar.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  add.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  txinvr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  error.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  verify.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  mpi_setup.f
+mpif77 -O3  -openmp  -o ../bin/sp-mz.C.16 sp.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o rhs.o zone_setup.o x_solve.o ninvr.o y_solve.o pinvr.o exch_qbc.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o mpi_setup.o ../common/print_results.o ../common/timers.o -Xlinker -rpath -Xlinker /g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -L/g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -lrapl
+make[1]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/SP-MZ'
+   ===========================================
+   =      NAS PARALLEL BENCHMARKS 3.3        =
+   =      MPI+OpenMP Multi-Zone Versions     =
+   =      F77                                =
+   ===========================================
+
+cd SP-MZ; make CLASS=C NPROCS=32
+make[1]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/SP-MZ'
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+../sys/setparams sp-mz 32 C
+mpif77 -c  -O3 -openmp -fPIC -DPIC  sp.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  initialize.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_solution.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  set_constants.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  adi.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  zone_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  x_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  ninvr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  y_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  pinvr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exch_qbc.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  z_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  tzetar.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  add.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  txinvr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  error.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  verify.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  mpi_setup.f
+mpif77 -O3  -openmp  -o ../bin/sp-mz.C.32 sp.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o rhs.o zone_setup.o x_solve.o ninvr.o y_solve.o pinvr.o exch_qbc.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o mpi_setup.o ../common/print_results.o ../common/timers.o -Xlinker -rpath -Xlinker /g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -L/g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -lrapl
+make[1]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/SP-MZ'
+   ===========================================
+   =      NAS PARALLEL BENCHMARKS 3.3        =
+   =      MPI+OpenMP Multi-Zone Versions     =
+   =      F77                                =
+   ===========================================
+
+cd SP-MZ; make CLASS=C NPROCS=64
+make[1]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/SP-MZ'
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+../sys/setparams sp-mz 64 C
+mpif77 -c  -O3 -openmp -fPIC -DPIC  sp.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  initialize.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_solution.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  set_constants.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  adi.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  zone_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  x_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  ninvr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  y_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  pinvr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exch_qbc.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  z_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  tzetar.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  add.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  txinvr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  error.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  verify.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  mpi_setup.f
+mpif77 -O3  -openmp  -o ../bin/sp-mz.C.64 sp.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o rhs.o zone_setup.o x_solve.o ninvr.o y_solve.o pinvr.o exch_qbc.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o mpi_setup.o ../common/print_results.o ../common/timers.o -Xlinker -rpath -Xlinker /g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -L/g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -lrapl
+make[1]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/SP-MZ'
+   ===========================================
+   =      NAS PARALLEL BENCHMARKS 3.3        =
+   =      MPI+OpenMP Multi-Zone Versions     =
+   =      F77                                =
+   ===========================================
+
+cd SP-MZ; make CLASS=C NPROCS=128
+make[1]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/SP-MZ'
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+../sys/setparams sp-mz 128 C
+mpif77 -c  -O3 -openmp -fPIC -DPIC  sp.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  initialize.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_solution.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  set_constants.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  adi.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  zone_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  x_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  ninvr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  y_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  pinvr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exch_qbc.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  z_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  tzetar.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  add.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  txinvr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  error.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  verify.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  mpi_setup.f
+mpif77 -O3  -openmp  -o ../bin/sp-mz.C.128 sp.o initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o rhs.o zone_setup.o x_solve.o ninvr.o y_solve.o pinvr.o exch_qbc.o z_solve.o tzetar.o add.o txinvr.o error.o verify.o mpi_setup.o ../common/print_results.o ../common/timers.o -Xlinker -rpath -Xlinker /g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -L/g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -lrapl
+make[1]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/SP-MZ'
+   ===========================================
+   =      NAS PARALLEL BENCHMARKS 3.3        =
+   =      MPI+OpenMP Multi-Zone Versions     =
+   =      F77                                =
+   ===========================================
+
+cd BT-MZ; make CLASS=A NPROCS=16 VERSION=
+make[1]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+../sys/setparams bt-mz 16 A
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+mpif77 -c  -O3 -openmp -fPIC -DPIC  bt.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  initialize.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_solution.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  set_constants.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  adi.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  zone_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  x_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  y_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exch_qbc.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  solve_subs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  z_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  add.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  error.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  verify.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  mpi_setup.f
+mpif77 -O3  -openmp  -o ../bin/bt-mz.A.16 bt.o  initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o  rhs.o zone_setup.o x_solve.o y_solve.o  exch_qbc.o solve_subs.o z_solve.o add.o error.o verify.o mpi_setup.o ../common/print_results.o ../common/timers.o -Xlinker -rpath -Xlinker /g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -L/g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -lrapl
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+make[1]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+   ===========================================
+   =      NAS PARALLEL BENCHMARKS 3.3        =
+   =      MPI+OpenMP Multi-Zone Versions     =
+   =      F77                                =
+   ===========================================
+
+cd BT-MZ; make CLASS=C NPROCS=1 VERSION=
+make[1]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+../sys/setparams bt-mz 1 C
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+mpif77 -c  -O3 -openmp -fPIC -DPIC  bt.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  initialize.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_solution.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  set_constants.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  adi.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  zone_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  x_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  y_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exch_qbc.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  solve_subs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  z_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  add.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  error.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  verify.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  mpi_setup.f
+mpif77 -O3  -openmp  -o ../bin/bt-mz.C.1 bt.o  initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o  rhs.o zone_setup.o x_solve.o y_solve.o  exch_qbc.o solve_subs.o z_solve.o add.o error.o verify.o mpi_setup.o ../common/print_results.o ../common/timers.o -Xlinker -rpath -Xlinker /g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -L/g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -lrapl
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+make[1]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+   ===========================================
+   =      NAS PARALLEL BENCHMARKS 3.3        =
+   =      MPI+OpenMP Multi-Zone Versions     =
+   =      F77                                =
+   ===========================================
+
+cd BT-MZ; make CLASS=C NPROCS=2 VERSION=
+make[1]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+../sys/setparams bt-mz 2 C
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+mpif77 -c  -O3 -openmp -fPIC -DPIC  bt.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  initialize.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_solution.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  set_constants.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  adi.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  zone_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  x_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  y_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exch_qbc.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  solve_subs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  z_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  add.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  error.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  verify.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  mpi_setup.f
+mpif77 -O3  -openmp  -o ../bin/bt-mz.C.2 bt.o  initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o  rhs.o zone_setup.o x_solve.o y_solve.o  exch_qbc.o solve_subs.o z_solve.o add.o error.o verify.o mpi_setup.o ../common/print_results.o ../common/timers.o -Xlinker -rpath -Xlinker /g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -L/g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -lrapl
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+make[1]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+   ===========================================
+   =      NAS PARALLEL BENCHMARKS 3.3        =
+   =      MPI+OpenMP Multi-Zone Versions     =
+   =      F77                                =
+   ===========================================
+
+cd BT-MZ; make CLASS=C NPROCS=4 VERSION=
+make[1]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+../sys/setparams bt-mz 4 C
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+mpif77 -c  -O3 -openmp -fPIC -DPIC  bt.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  initialize.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_solution.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  set_constants.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  adi.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  zone_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  x_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  y_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exch_qbc.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  solve_subs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  z_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  add.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  error.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  verify.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  mpi_setup.f
+mpif77 -O3  -openmp  -o ../bin/bt-mz.C.4 bt.o  initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o  rhs.o zone_setup.o x_solve.o y_solve.o  exch_qbc.o solve_subs.o z_solve.o add.o error.o verify.o mpi_setup.o ../common/print_results.o ../common/timers.o -Xlinker -rpath -Xlinker /g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -L/g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -lrapl
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+make[1]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+   ===========================================
+   =      NAS PARALLEL BENCHMARKS 3.3        =
+   =      MPI+OpenMP Multi-Zone Versions     =
+   =      F77                                =
+   ===========================================
+
+cd BT-MZ; make CLASS=C NPROCS=8 VERSION=
+make[1]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+../sys/setparams bt-mz 8 C
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+mpif77 -c  -O3 -openmp -fPIC -DPIC  bt.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  initialize.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_solution.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  set_constants.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  adi.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  zone_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  x_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  y_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exch_qbc.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  solve_subs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  z_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  add.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  error.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  verify.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  mpi_setup.f
+mpif77 -O3  -openmp  -o ../bin/bt-mz.C.8 bt.o  initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o  rhs.o zone_setup.o x_solve.o y_solve.o  exch_qbc.o solve_subs.o z_solve.o add.o error.o verify.o mpi_setup.o ../common/print_results.o ../common/timers.o -Xlinker -rpath -Xlinker /g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -L/g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -lrapl
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+make[1]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+   ===========================================
+   =      NAS PARALLEL BENCHMARKS 3.3        =
+   =      MPI+OpenMP Multi-Zone Versions     =
+   =      F77                                =
+   ===========================================
+
+cd BT-MZ; make CLASS=C NPROCS=16 VERSION=
+make[1]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+../sys/setparams bt-mz 16 C
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+mpif77 -c  -O3 -openmp -fPIC -DPIC  bt.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  initialize.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_solution.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  set_constants.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  adi.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  zone_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  x_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  y_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exch_qbc.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  solve_subs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  z_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  add.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  error.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  verify.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  mpi_setup.f
+mpif77 -O3  -openmp  -o ../bin/bt-mz.C.16 bt.o  initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o  rhs.o zone_setup.o x_solve.o y_solve.o  exch_qbc.o solve_subs.o z_solve.o add.o error.o verify.o mpi_setup.o ../common/print_results.o ../common/timers.o -Xlinker -rpath -Xlinker /g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -L/g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -lrapl
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+make[1]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+   ===========================================
+   =      NAS PARALLEL BENCHMARKS 3.3        =
+   =      MPI+OpenMP Multi-Zone Versions     =
+   =      F77                                =
+   ===========================================
+
+cd BT-MZ; make CLASS=C NPROCS=32 VERSION=
+make[1]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+../sys/setparams bt-mz 32 C
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+mpif77 -c  -O3 -openmp -fPIC -DPIC  bt.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  initialize.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_solution.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  set_constants.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  adi.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  zone_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  x_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  y_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exch_qbc.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  solve_subs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  z_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  add.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  error.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  verify.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  mpi_setup.f
+mpif77 -O3  -openmp  -o ../bin/bt-mz.C.32 bt.o  initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o  rhs.o zone_setup.o x_solve.o y_solve.o  exch_qbc.o solve_subs.o z_solve.o add.o error.o verify.o mpi_setup.o ../common/print_results.o ../common/timers.o -Xlinker -rpath -Xlinker /g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -L/g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -lrapl
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+make[1]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+   ===========================================
+   =      NAS PARALLEL BENCHMARKS 3.3        =
+   =      MPI+OpenMP Multi-Zone Versions     =
+   =      F77                                =
+   ===========================================
+
+cd BT-MZ; make CLASS=C NPROCS=64 VERSION=
+make[1]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+../sys/setparams bt-mz 64 C
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+mpif77 -c  -O3 -openmp -fPIC -DPIC  bt.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  initialize.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_solution.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  set_constants.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  adi.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  zone_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  x_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  y_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exch_qbc.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  solve_subs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  z_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  add.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  error.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  verify.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  mpi_setup.f
+mpif77 -O3  -openmp  -o ../bin/bt-mz.C.64 bt.o  initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o  rhs.o zone_setup.o x_solve.o y_solve.o  exch_qbc.o solve_subs.o z_solve.o add.o error.o verify.o mpi_setup.o ../common/print_results.o ../common/timers.o -Xlinker -rpath -Xlinker /g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -L/g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -lrapl
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+make[1]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+   ===========================================
+   =      NAS PARALLEL BENCHMARKS 3.3        =
+   =      MPI+OpenMP Multi-Zone Versions     =
+   =      F77                                =
+   ===========================================
+
+cd BT-MZ; make CLASS=C NPROCS=128 VERSION=
+make[1]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+../sys/setparams bt-mz 128 C
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+mpif77 -c  -O3 -openmp -fPIC -DPIC  bt.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  initialize.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_solution.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact_rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  set_constants.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  adi.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  zone_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  x_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  y_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exch_qbc.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  solve_subs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  z_solve.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  add.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  error.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  verify.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  mpi_setup.f
+mpif77 -O3  -openmp  -o ../bin/bt-mz.C.128 bt.o  initialize.o exact_solution.o exact_rhs.o set_constants.o adi.o  rhs.o zone_setup.o x_solve.o y_solve.o  exch_qbc.o solve_subs.o z_solve.o add.o error.o verify.o mpi_setup.o ../common/print_results.o ../common/timers.o -Xlinker -rpath -Xlinker /g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -L/g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -lrapl
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+make[1]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/BT-MZ'
+   ===========================================
+   =      NAS PARALLEL BENCHMARKS 3.3        =
+   =      MPI+OpenMP Multi-Zone Versions     =
+   =      F77                                =
+   ===========================================
+
+cd LU-MZ; make CLASS=A NPROCS=16 VERSION=
+make[1]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+../sys/setparams lu-mz 16 A
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+mpif77 -c  -O3 -openmp -fPIC -DPIC  lu.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  read_input.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  mpi_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  setcoeff.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  setbv.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  setiv.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  erhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  ssor.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  zone_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exch_qbc.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  l2norm.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  jacld.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  blts.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  jacu.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  buts.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  syncs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  error.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  pintgr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  verify.f
+mpif77 -O3  -openmp  -o ../bin/lu-mz.A.16 lu.o read_input.o mpi_setup.o setcoeff.o setbv.o exact.o setiv.o erhs.o ssor.o zone_setup.o exch_qbc.o rhs.o l2norm.o jacld.o blts.o jacu.o buts.o syncs.o error.o pintgr.o verify.o ../common/print_results.o ../common/timers.o -Xlinker -rpath -Xlinker /g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -L/g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -lrapl
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+make[1]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+   ===========================================
+   =      NAS PARALLEL BENCHMARKS 3.3        =
+   =      MPI+OpenMP Multi-Zone Versions     =
+   =      F77                                =
+   ===========================================
+
+cd LU-MZ; make CLASS=C NPROCS=1 VERSION=
+make[1]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+../sys/setparams lu-mz 1 C
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+mpif77 -c  -O3 -openmp -fPIC -DPIC  lu.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  read_input.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  mpi_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  setcoeff.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  setbv.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  setiv.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  erhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  ssor.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  zone_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exch_qbc.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  jacld.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  jacu.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  pintgr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  verify.f
+mpif77 -O3  -openmp  -o ../bin/lu-mz.C.1 lu.o read_input.o mpi_setup.o setcoeff.o setbv.o exact.o setiv.o erhs.o ssor.o zone_setup.o exch_qbc.o rhs.o l2norm.o jacld.o blts.o jacu.o buts.o syncs.o error.o pintgr.o verify.o ../common/print_results.o ../common/timers.o -Xlinker -rpath -Xlinker /g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -L/g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -lrapl
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+make[1]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+   ===========================================
+   =      NAS PARALLEL BENCHMARKS 3.3        =
+   =      MPI+OpenMP Multi-Zone Versions     =
+   =      F77                                =
+   ===========================================
+
+cd LU-MZ; make CLASS=C NPROCS=2 VERSION=
+make[1]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+../sys/setparams lu-mz 2 C
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+mpif77 -c  -O3 -openmp -fPIC -DPIC  lu.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  read_input.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  mpi_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  setcoeff.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  setbv.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  setiv.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  erhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  ssor.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  zone_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exch_qbc.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  jacld.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  jacu.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  pintgr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  verify.f
+mpif77 -O3  -openmp  -o ../bin/lu-mz.C.2 lu.o read_input.o mpi_setup.o setcoeff.o setbv.o exact.o setiv.o erhs.o ssor.o zone_setup.o exch_qbc.o rhs.o l2norm.o jacld.o blts.o jacu.o buts.o syncs.o error.o pintgr.o verify.o ../common/print_results.o ../common/timers.o -Xlinker -rpath -Xlinker /g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -L/g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -lrapl
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+make[1]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+   ===========================================
+   =      NAS PARALLEL BENCHMARKS 3.3        =
+   =      MPI+OpenMP Multi-Zone Versions     =
+   =      F77                                =
+   ===========================================
+
+cd LU-MZ; make CLASS=C NPROCS=4 VERSION=
+make[1]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+../sys/setparams lu-mz 4 C
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+mpif77 -c  -O3 -openmp -fPIC -DPIC  lu.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  read_input.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  mpi_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  setcoeff.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  setbv.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  setiv.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  erhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  ssor.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  zone_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exch_qbc.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  jacld.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  jacu.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  pintgr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  verify.f
+mpif77 -O3  -openmp  -o ../bin/lu-mz.C.4 lu.o read_input.o mpi_setup.o setcoeff.o setbv.o exact.o setiv.o erhs.o ssor.o zone_setup.o exch_qbc.o rhs.o l2norm.o jacld.o blts.o jacu.o buts.o syncs.o error.o pintgr.o verify.o ../common/print_results.o ../common/timers.o -Xlinker -rpath -Xlinker /g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -L/g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -lrapl
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+make[1]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+   ===========================================
+   =      NAS PARALLEL BENCHMARKS 3.3        =
+   =      MPI+OpenMP Multi-Zone Versions     =
+   =      F77                                =
+   ===========================================
+
+cd LU-MZ; make CLASS=C NPROCS=8 VERSION=
+make[1]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+../sys/setparams lu-mz 8 C
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+mpif77 -c  -O3 -openmp -fPIC -DPIC  lu.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  read_input.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  mpi_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  setcoeff.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  setbv.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  setiv.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  erhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  ssor.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  zone_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exch_qbc.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  jacld.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  jacu.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  pintgr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  verify.f
+mpif77 -O3  -openmp  -o ../bin/lu-mz.C.8 lu.o read_input.o mpi_setup.o setcoeff.o setbv.o exact.o setiv.o erhs.o ssor.o zone_setup.o exch_qbc.o rhs.o l2norm.o jacld.o blts.o jacu.o buts.o syncs.o error.o pintgr.o verify.o ../common/print_results.o ../common/timers.o -Xlinker -rpath -Xlinker /g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -L/g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -lrapl
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+make[1]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+   ===========================================
+   =      NAS PARALLEL BENCHMARKS 3.3        =
+   =      MPI+OpenMP Multi-Zone Versions     =
+   =      F77                                =
+   ===========================================
+
+cd LU-MZ; make CLASS=C NPROCS=16 VERSION=
+make[1]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+../sys/setparams lu-mz 16 C
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+mpif77 -c  -O3 -openmp -fPIC -DPIC  lu.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  read_input.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  mpi_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  setcoeff.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  setbv.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  setiv.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  erhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  ssor.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  zone_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exch_qbc.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  jacld.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  jacu.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  pintgr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  verify.f
+mpif77 -O3  -openmp  -o ../bin/lu-mz.C.16 lu.o read_input.o mpi_setup.o setcoeff.o setbv.o exact.o setiv.o erhs.o ssor.o zone_setup.o exch_qbc.o rhs.o l2norm.o jacld.o blts.o jacu.o buts.o syncs.o error.o pintgr.o verify.o ../common/print_results.o ../common/timers.o -Xlinker -rpath -Xlinker /g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -L/g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -lrapl
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+make[1]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+   ===========================================
+   =      NAS PARALLEL BENCHMARKS 3.3        =
+   =      MPI+OpenMP Multi-Zone Versions     =
+   =      F77                                =
+   ===========================================
+
+cd LU-MZ; make CLASS=C NPROCS=32 VERSION=
+make[1]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+../sys/setparams lu-mz 32 C
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+mpif77 -c  -O3 -openmp -fPIC -DPIC  lu.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  read_input.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  mpi_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  setcoeff.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  setbv.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  setiv.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  erhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  ssor.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  zone_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exch_qbc.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  jacld.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  jacu.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  pintgr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  verify.f
+mpif77 -O3  -openmp  -o ../bin/lu-mz.C.32 lu.o read_input.o mpi_setup.o setcoeff.o setbv.o exact.o setiv.o erhs.o ssor.o zone_setup.o exch_qbc.o rhs.o l2norm.o jacld.o blts.o jacu.o buts.o syncs.o error.o pintgr.o verify.o ../common/print_results.o ../common/timers.o -Xlinker -rpath -Xlinker /g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -L/g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -lrapl
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+make[1]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+   ===========================================
+   =      NAS PARALLEL BENCHMARKS 3.3        =
+   =      MPI+OpenMP Multi-Zone Versions     =
+   =      F77                                =
+   ===========================================
+
+cd LU-MZ; make CLASS=C NPROCS=64 VERSION=
+make[1]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+../sys/setparams lu-mz 64 C
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+mpif77 -c  -O3 -openmp -fPIC -DPIC  lu.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  read_input.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  mpi_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  setcoeff.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  setbv.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  setiv.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  erhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  ssor.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  zone_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exch_qbc.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  jacld.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  jacu.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  pintgr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  verify.f
+mpif77 -O3  -openmp  -o ../bin/lu-mz.C.64 lu.o read_input.o mpi_setup.o setcoeff.o setbv.o exact.o setiv.o erhs.o ssor.o zone_setup.o exch_qbc.o rhs.o l2norm.o jacld.o blts.o jacu.o buts.o syncs.o error.o pintgr.o verify.o ../common/print_results.o ../common/timers.o -Xlinker -rpath -Xlinker /g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -L/g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -lrapl
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+make[1]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+   ===========================================
+   =      NAS PARALLEL BENCHMARKS 3.3        =
+   =      MPI+OpenMP Multi-Zone Versions     =
+   =      F77                                =
+   ===========================================
+
+cd LU-MZ; make CLASS=C NPROCS=128 VERSION=
+make[1]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/sys'
+../sys/setparams lu-mz 128 C
+make[2]: Entering directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+mpif77 -c  -O3 -openmp -fPIC -DPIC  lu.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  read_input.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  mpi_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  setcoeff.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  setbv.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exact.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  setiv.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  erhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  ssor.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  zone_setup.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  exch_qbc.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  rhs.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  jacld.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  jacu.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  pintgr.f
+mpif77 -c  -O3 -openmp -fPIC -DPIC  verify.f
+mpif77 -O3  -openmp  -o ../bin/lu-mz.C.128 lu.o read_input.o mpi_setup.o setcoeff.o setbv.o exact.o setiv.o erhs.o ssor.o zone_setup.o exch_qbc.o rhs.o l2norm.o jacld.o blts.o jacu.o buts.o syncs.o error.o pintgr.o verify.o ../common/print_results.o ../common/timers.o -Xlinker -rpath -Xlinker /g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -L/g/g24/rountree/local/src/rapl-bmarks/bmarks/librapl/libmsr/lib -lrapl
+make[2]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'
+make[1]: Leaving directory `/g/g24/rountree/local/src/rapl-bmarks/bmarks/NAS-MZ/LU-MZ'

@@ -1,0 +1,12 @@
+mpiP: 
+mpiP: mpiP: mpiP V3.3.0 (Build Nov  2 2011/14:57:14)
+mpiP: Direct questions and errors to mpip-help@lists.sourceforge.net
+mpiP: 
+Lulesh (MPI/OMP)
+  Elements: 216000 (60 x 60 x 60)
+Lulesh (MPI/OMP) Completed
+  Simulation Time: 1.156826070000e+02 (wallclock, in seconds)
+  Total Iterations: 500
+mpiP: 
+mpiP: Storing mpiP output in [./luleshMPI_OMP.27.20725.1.mpiP].
+mpiP: 

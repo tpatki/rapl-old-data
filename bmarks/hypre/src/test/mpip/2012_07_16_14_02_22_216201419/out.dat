@@ -1,0 +1,174 @@
+mpiP: 
+mpiP: mpiP: mpiP V3.3.0 (Build Nov  2 2011/14:57:14)
+mpiP: Direct questions and errors to mpip-help@lists.sourceforge.net
+mpiP: 
+Running with these driver parameters:
+  solver ID    = 3
+
+  Laplacian:   num_fun = 1
+    (nx, ny, nz) = (300, 300, 300)
+    (Px, Py, Pz) = (1, 128, 1)
+    (cx, cy, cz) = (1.000000, 1.000000, 1.000000)
+
+=============================================
+IJ Matrix Setup:
+=============================================
+Spatial operator:
+  wall clock time = 7.610000 seconds
+  wall MFLOPS     = 0.000000
+  cpu clock time  = 7.590000 seconds
+  cpu MFLOPS      = 0.000000
+
+  RHS vector has unit components
+  Initial guess is 0
+=============================================
+IJ Vector Setup:
+=============================================
+RHS and Initial Guess:
+  wall clock time = 0.010000 seconds
+  wall MFLOPS     = 0.000000
+  cpu clock time  = 0.010000 seconds
+  cpu MFLOPS      = 0.000000
+
+Solver: AMG-GMRES
+HYPRE_GMRESGetPrecond got good precond
+
+BoomerAMG SETUP PARAMETERS:
+
+ Max levels = 25
+ Num levels = 8
+
+ Strength Threshold = 0.250000
+ Interpolation Truncation Factor = 0.000000
+ Maximum Row Sum Threshold for Dependency Weakening = 1.000000
+
+ Coarsening Type = HMIS 
+
+ No. of levels of aggressive coarsening: 1
+
+ Interpolation on agg. levels= multipass interpolation
+ measures are determined locally
+
+ Interpolation = extended+i interpolation (if no common C point)
+
+Operator Matrix Information:
+
+            nonzero         entries per row        row sums
+lev   rows  entries  sparse  min  max   avg       min         max
+===================================================================
+ 0 27000000 188460000  0.000     4    7   7.0   0.000e+00   3.000e+00
+ 1 1469253 30230355  0.000     6   36  20.6  -1.235e-13   1.209e+01
+ 2  360584 20726688  0.000     8  107  57.5  -1.927e-02   2.565e+01
+ 3   50623  4540989  0.002    15  147  89.7  -1.604e-04   4.155e+01
+ 4    5685   526513  0.016    12  153  92.6  -6.871e-11   1.018e+02
+ 5     715    51161  0.100    13  148  71.6   1.207e-09   2.869e+02
+ 6      92     3776  0.446    12   74  41.0   1.386e+01   1.126e+03
+ 7       9       73  0.901     7    9   8.1   7.553e+01   2.012e+03
+
+
+Interpolation Matrix Information:
+                 entries/row    min     max         row sums
+lev  rows cols    min max     weight   weight     min       max 
+=================================================================
+ 0 27000000 x 1469253   1   8   2.646e-02 9.954e-01 2.963e-01 1.000e+00
+ 1 1469253 x 360584   1   4   7.964e-03 1.000e+00 2.540e-01 1.000e+00
+ 2 360584 x 50623   1   4  -8.368e-02 1.000e+00 1.037e-01 1.001e+00
+ 3 50623 x 5685    1   4   3.849e-03 1.000e+00 4.979e-02 1.000e+00
+ 4  5685 x 715     1   4  -1.579e+00 1.681e+00 2.643e-02 1.000e+00
+ 5   715 x 92      1   4  -9.700e-01 1.152e+00 5.449e-03 1.000e+00
+ 6    92 x 9       1   4  -8.138e-02 2.885e-01 1.826e-02 1.000e+00
+
+
+     Complexity:    grid = 1.069887
+                operator = 1.297567
+
+
+
+
+BoomerAMG SOLVER PARAMETERS:
+
+  Maximum number of cycles:         1 
+  Stopping Tolerance:               0.000000e+00 
+  Cycle type (1 = V, 2 = W, etc.):  1
+
+  Relaxation Parameters:
+   Visiting Grid:                     down   up  coarse
+            Number of sweeps:            1    1     1 
+   Type 0=Jac, 3=hGS, 6=hSGS, 9=GE:      3    3     9 
+   Point types, partial sweeps (1=C, -1=F):
+                  Pre-CG relaxation (down):   0
+                   Post-CG relaxation (up):   0
+                             Coarsest grid:   0
+
+=============================================
+Setup phase times:
+=============================================
+GMRES Setup:
+  wall clock time = 1.530000 seconds
+  wall MFLOPS     = 0.000000
+  cpu clock time  = 10.730000 seconds
+  cpu MFLOPS      = 0.000000
+
+L2 norm of b: 5.196152e+03
+Initial L2 norm of residual: 5.196152e+03
+=============================================
+
+Iters     resid.norm     conv.rate  rel.res.norm
+-----    ------------    ---------- ------------
+    1    5.178744e+03    0.996650   9.966498e-01
+    2    5.102085e+03    0.985197   9.818967e-01
+    3    4.808683e+03    0.942494   9.254315e-01
+    4    4.019560e+03    0.835896   7.735647e-01
+    5    2.608348e+03    0.648914   5.019769e-01
+    6    1.462011e+03    0.560512   2.813642e-01
+    7    7.542456e+02    0.515896   1.451546e-01
+    8    3.858428e+02    0.511561   7.425547e-02
+    9    2.022151e+02    0.524087   3.891632e-02
+   10    1.073293e+02    0.530768   2.065553e-02
+   11    7.309360e+01    0.681022   1.406687e-02
+   12    4.097662e+01    0.560605   7.885953e-03
+   13    2.099965e+01    0.512479   4.041384e-03
+   14    1.171770e+01    0.557995   2.255072e-03
+   15    6.196831e+00    0.528844   1.192581e-03
+   16    2.783019e+00    0.449104   5.355923e-04
+   17    1.320515e+00    0.474490   2.541332e-04
+   18    7.563352e-01    0.572758   1.455568e-04
+   19    4.400906e-01    0.581872   8.469547e-05
+   20    2.407082e-01    0.546951   4.632431e-05
+   21    1.490206e-01    0.619092   2.867902e-05
+   22    9.154401e-02    0.614304   1.761765e-05
+   23    4.923148e-02    0.537790   9.474603e-06
+   24    2.436043e-02    0.494814   4.688167e-06
+   25    1.230811e-02    0.505250   2.368697e-06
+   26    6.652717e-03    0.540515   1.280316e-06
+   27    3.616689e-03    0.543641   6.960322e-07
+   28    1.925406e-03    0.532367   3.705446e-07
+   29    1.080403e-03    0.561130   2.079237e-07
+   30    6.236503e-04    0.577239   1.200216e-07
+   31    3.914738e-04    0.627714   7.533916e-08
+   32    2.240014e-04    0.572200   4.310909e-08
+   33    1.175921e-04    0.524961   2.263061e-08
+   34    6.501199e-05    0.552860   1.251156e-08
+   35    3.552486e-05    0.546435   6.836762e-09
+
+
+Final L2 norm of residual: 3.552484e-05
+
+
+
+=============================================
+Solve phase times:
+=============================================
+GMRES Solve:
+  wall clock time = 1.340000 seconds
+  wall MFLOPS     = 0.000000
+  cpu clock time  = 16.050000 seconds
+  cpu MFLOPS      = 0.000000
+
+
+GMRES Iterations = 35
+Final GMRES Relative Residual Norm = 6.836759e-09
+
+mpiP: 
+mpiP: Storing mpiP output in [./new_ij.128.17382.1.mpiP].
+mpiP: 

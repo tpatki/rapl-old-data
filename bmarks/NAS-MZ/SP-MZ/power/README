@@ -1,0 +1,4 @@
+Run genTable.sh <data directory>
+
+It should create table.out, which contains the power as well as timing data and general info.
+

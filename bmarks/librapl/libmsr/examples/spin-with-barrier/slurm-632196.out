@@ -1,0 +1,6657 @@
++ i=16
++ minthreads=2
++ j=4
++ maxnodes=32
++ export PKG_MINW_MINS=0x38198
++ PKG_MINW_MINS=0x38198
++ export PP0_MINW_MINS=0x38198
++ PP0_MINW_MINS=0x38198
++ export DRAM_MINW_MINS=0x38078
++ DRAM_MINW_MINS=0x38078
++ export MSR_PKG_POWER_LIMIT=0x0
++ MSR_PKG_POWER_LIMIT=0x0
++ export MSR_PP0_POWER_LIMIT=0x0
++ MSR_PP0_POWER_LIMIT=0x0
++ export MSR_DRAM_POWER_LIMIT=0x0
++ MSR_DRAM_POWER_LIMIT=0x0
++ export MSR_RANK_MOD=1
++ MSR_RANK_MOD=1
++ export SAMPLE=1
++ SAMPLE=1
++ t=0
++ for t in 0 1
++ export TURBO_ENABLE=0
++ TURBO_ENABLE=0
++ export READ_WRITE=0
++ READ_WRITE=0
++ export READ_ONLY=1
++ READ_ONLY=1
++ i=16
++ j=4
++ '[' 4 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_12_43_681698666
++ mkdir 2012_10_12_10_12_43_681698666
++ cd 2012_10_12_10_12_43_681698666
++ touch out.dat
++ env
++ echo 2012_10_12_10_12_43_681698666
++ uname -a
++ grep MHz
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_13_24_353311492
++ mkdir 2012_10_12_10_13_24_353311492
++ cd 2012_10_12_10_13_24_353311492
++ touch out.dat
++ env
++ echo 2012_10_12_10_13_24_353311492
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=56 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_14_03_176744598
++ mkdir 2012_10_12_10_14_03_176744598
++ cd 2012_10_12_10_14_03_176744598
++ touch out.dat
++ env
++ echo 2012_10_12_10_14_03_176744598
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=48 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_14_41_655159848
++ mkdir 2012_10_12_10_14_41_655159848
++ cd 2012_10_12_10_14_41_655159848
++ touch out.dat
++ env
++ echo 2012_10_12_10_14_41_655159848
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=40 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_15_18_961973662
++ mkdir 2012_10_12_10_15_18_961973662
++ cd 2012_10_12_10_15_18_961973662
++ touch out.dat
++ env
++ echo 2012_10_12_10_15_18_961973662
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=32 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_15_57_043124087
++ mkdir 2012_10_12_10_15_57_043124087
++ cd 2012_10_12_10_15_57_043124087
++ touch out.dat
++ env
++ echo 2012_10_12_10_15_57_043124087
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=24 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_16_35_089489114
++ mkdir 2012_10_12_10_16_35_089489114
++ cd 2012_10_12_10_16_35_089489114
++ touch out.dat
++ env
++ echo 2012_10_12_10_16_35_089489114
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=16 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_17_13_592759926
++ mkdir 2012_10_12_10_17_13_592759926
++ cd 2012_10_12_10_17_13_592759926
++ touch out.dat
++ env
++ echo 2012_10_12_10_17_13_592759926
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=8 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=8
++ '[' 8 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_17_51_962042645
++ mkdir 2012_10_12_10_17_51_962042645
++ cd 2012_10_12_10_17_51_962042645
++ touch out.dat
++ env
++ echo 2012_10_12_10_17_51_962042645
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=128 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_18_35_880166973
++ mkdir 2012_10_12_10_18_35_880166973
++ cd 2012_10_12_10_18_35_880166973
++ touch out.dat
++ env
++ echo 2012_10_12_10_18_35_880166973
++ uname -a
++ grep MHz
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=112 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_19_14_626952481
++ mkdir 2012_10_12_10_19_14_626952481
++ cd 2012_10_12_10_19_14_626952481
++ touch out.dat
++ env
++ echo 2012_10_12_10_19_14_626952481
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=96 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_19_54_082038327
++ mkdir 2012_10_12_10_19_54_082038327
++ cd 2012_10_12_10_19_54_082038327
++ touch out.dat
++ env
++ echo 2012_10_12_10_19_54_082038327
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=80 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_20_32_815536107
++ mkdir 2012_10_12_10_20_32_815536107
++ cd 2012_10_12_10_20_32_815536107
++ touch out.dat
++ env
++ echo 2012_10_12_10_20_32_815536107
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_21_12_255460297
++ mkdir 2012_10_12_10_21_12_255460297
++ cd 2012_10_12_10_21_12_255460297
++ touch out.dat
++ env
++ echo 2012_10_12_10_21_12_255460297
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=48 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_21_51_398450076
++ mkdir 2012_10_12_10_21_51_398450076
++ cd 2012_10_12_10_21_51_398450076
++ touch out.dat
++ env
++ echo 2012_10_12_10_21_51_398450076
++ uname -a
++ grep MHz
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=32 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_22_32_744186412
++ mkdir 2012_10_12_10_22_32_744186412
++ cd 2012_10_12_10_22_32_744186412
++ touch out.dat
++ env
++ echo 2012_10_12_10_22_32_744186412
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=16 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=16
++ '[' 16 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_23_11_234410170
++ mkdir 2012_10_12_10_23_11_234410170
++ cd 2012_10_12_10_23_11_234410170
++ touch out.dat
++ env
++ echo 2012_10_12_10_23_11_234410170
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=256 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_23_52_215431024
++ mkdir 2012_10_12_10_23_52_215431024
++ cd 2012_10_12_10_23_52_215431024
++ touch out.dat
++ env
++ echo 2012_10_12_10_23_52_215431024
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=224 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_24_32_738837887
++ mkdir 2012_10_12_10_24_32_738837887
++ cd 2012_10_12_10_24_32_738837887
++ touch out.dat
++ env
++ echo 2012_10_12_10_24_32_738837887
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=192 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_25_11_784946247
++ mkdir 2012_10_12_10_25_11_784946247
++ cd 2012_10_12_10_25_11_784946247
++ touch out.dat
++ env
++ echo 2012_10_12_10_25_11_784946247
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=160 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_25_50_759961796
++ mkdir 2012_10_12_10_25_50_759961796
++ cd 2012_10_12_10_25_50_759961796
++ touch out.dat
++ env
++ echo 2012_10_12_10_25_50_759961796
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=128 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_26_30_169117596
++ mkdir 2012_10_12_10_26_30_169117596
++ cd 2012_10_12_10_26_30_169117596
++ touch out.dat
++ env
++ echo 2012_10_12_10_26_30_169117596
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=96 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_27_09_779470810
++ mkdir 2012_10_12_10_27_09_779470810
++ cd 2012_10_12_10_27_09_779470810
++ touch out.dat
++ env
++ echo 2012_10_12_10_27_09_779470810
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_27_48_983044906
++ mkdir 2012_10_12_10_27_48_983044906
++ cd 2012_10_12_10_27_48_983044906
++ touch out.dat
++ env
++ echo 2012_10_12_10_27_48_983044906
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=32 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=32
++ '[' 32 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_28_27_457358919
++ mkdir 2012_10_12_10_28_27_457358919
++ cd 2012_10_12_10_28_27_457358919
++ touch out.dat
++ env
++ echo 2012_10_12_10_28_27_457358919
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=512 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_29_09_582188865
++ mkdir 2012_10_12_10_29_09_582188865
++ cd 2012_10_12_10_29_09_582188865
++ touch out.dat
++ env
++ echo 2012_10_12_10_29_09_582188865
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=448 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_29_50_869957667
++ mkdir 2012_10_12_10_29_50_869957667
++ cd 2012_10_12_10_29_50_869957667
++ touch out.dat
++ env
++ echo 2012_10_12_10_29_50_869957667
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=384 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_30_31_396038418
++ mkdir 2012_10_12_10_30_31_396038418
++ cd 2012_10_12_10_30_31_396038418
++ touch out.dat
++ env
++ echo 2012_10_12_10_30_31_396038418
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=320 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_31_12_619018490
++ mkdir 2012_10_12_10_31_12_619018490
++ cd 2012_10_12_10_31_12_619018490
++ touch out.dat
++ env
++ echo 2012_10_12_10_31_12_619018490
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=256 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_31_52_628597123
++ mkdir 2012_10_12_10_31_52_628597123
++ cd 2012_10_12_10_31_52_628597123
++ touch out.dat
++ env
++ echo 2012_10_12_10_31_52_628597123
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=192 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_32_32_654045550
++ mkdir 2012_10_12_10_32_32_654045550
++ cd 2012_10_12_10_32_32_654045550
++ touch out.dat
++ env
++ echo 2012_10_12_10_32_32_654045550
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=128 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_33_11_899662578
++ mkdir 2012_10_12_10_33_11_899662578
++ cd 2012_10_12_10_33_11_899662578
++ touch out.dat
++ env
++ echo 2012_10_12_10_33_11_899662578
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=64
++ '[' 64 -le 32 ']'
++ export READ_WRITE=1
++ READ_WRITE=1
++ export READ_ONLY=0
++ READ_ONLY=0
++ for pkg in 0x38198 0x038208 0x038280 0x0382f8
++ i=16
++ j=4
++ export MSR_PKG_POWER_LIMIT=0x38198
++ MSR_PKG_POWER_LIMIT=0x38198
++ '[' 4 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_33_50_640457117
++ mkdir 2012_10_12_10_33_50_640457117
++ cd 2012_10_12_10_33_50_640457117
++ touch out.dat
++ env
++ echo 2012_10_12_10_33_50_640457117
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_34_42_346705312
++ mkdir 2012_10_12_10_34_42_346705312
++ cd 2012_10_12_10_34_42_346705312
++ touch out.dat
++ env
++ echo 2012_10_12_10_34_42_346705312
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=56 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_35_30_978115491
++ mkdir 2012_10_12_10_35_30_978115491
++ cd 2012_10_12_10_35_30_978115491
++ touch out.dat
++ env
++ echo 2012_10_12_10_35_30_978115491
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=48 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_36_16_266598897
++ mkdir 2012_10_12_10_36_16_266598897
++ cd 2012_10_12_10_36_16_266598897
++ touch out.dat
++ env
++ echo 2012_10_12_10_36_16_266598897
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=40 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_37_01_298397171
++ mkdir 2012_10_12_10_37_01_298397171
++ cd 2012_10_12_10_37_01_298397171
++ touch out.dat
++ env
++ echo 2012_10_12_10_37_01_298397171
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=32 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_37_40_338787398
++ mkdir 2012_10_12_10_37_40_338787398
++ cd 2012_10_12_10_37_40_338787398
++ touch out.dat
++ env
++ echo 2012_10_12_10_37_40_338787398
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=24 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_38_18_452978360
++ mkdir 2012_10_12_10_38_18_452978360
++ cd 2012_10_12_10_38_18_452978360
++ touch out.dat
++ env
++ echo 2012_10_12_10_38_18_452978360
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=16 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_38_56_503192147
++ mkdir 2012_10_12_10_38_56_503192147
++ cd 2012_10_12_10_38_56_503192147
++ touch out.dat
++ env
++ echo 2012_10_12_10_38_56_503192147
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=8 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=8
++ '[' 8 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_39_34_844968591
++ mkdir 2012_10_12_10_39_34_844968591
++ cd 2012_10_12_10_39_34_844968591
++ touch out.dat
++ env
++ echo 2012_10_12_10_39_34_844968591
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=128 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_40_26_026625015
++ mkdir 2012_10_12_10_40_26_026625015
++ cd 2012_10_12_10_40_26_026625015
++ touch out.dat
++ env
++ echo 2012_10_12_10_40_26_026625015
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=112 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_41_16_913279472
++ mkdir 2012_10_12_10_41_16_913279472
++ cd 2012_10_12_10_41_16_913279472
++ touch out.dat
++ env
++ echo 2012_10_12_10_41_16_913279472
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=96 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_42_03_913392452
++ mkdir 2012_10_12_10_42_03_913392452
++ cd 2012_10_12_10_42_03_913392452
++ touch out.dat
++ env
++ echo 2012_10_12_10_42_03_913392452
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=80 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_42_48_629068154
++ mkdir 2012_10_12_10_42_48_629068154
++ cd 2012_10_12_10_42_48_629068154
++ touch out.dat
++ env
++ echo 2012_10_12_10_42_48_629068154
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_43_26_870181523
++ mkdir 2012_10_12_10_43_26_870181523
++ cd 2012_10_12_10_43_26_870181523
++ touch out.dat
++ env
++ echo 2012_10_12_10_43_26_870181523
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=48 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_44_05_035342602
++ mkdir 2012_10_12_10_44_05_035342602
++ cd 2012_10_12_10_44_05_035342602
++ touch out.dat
++ env
++ echo 2012_10_12_10_44_05_035342602
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=32 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_44_43_322449222
++ mkdir 2012_10_12_10_44_43_322449222
++ cd 2012_10_12_10_44_43_322449222
++ touch out.dat
++ env
++ echo 2012_10_12_10_44_43_322449222
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=16 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=16
++ '[' 16 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_45_21_287837910
++ mkdir 2012_10_12_10_45_21_287837910
++ cd 2012_10_12_10_45_21_287837910
++ touch out.dat
++ env
++ echo 2012_10_12_10_45_21_287837910
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=256 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_46_13_034448658
++ mkdir 2012_10_12_10_46_13_034448658
++ cd 2012_10_12_10_46_13_034448658
++ touch out.dat
++ env
++ echo 2012_10_12_10_46_13_034448658
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=224 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_47_03_487098233
++ mkdir 2012_10_12_10_47_03_487098233
++ cd 2012_10_12_10_47_03_487098233
++ touch out.dat
++ env
++ echo 2012_10_12_10_47_03_487098233
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=192 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_47_50_855025580
++ mkdir 2012_10_12_10_47_50_855025580
++ cd 2012_10_12_10_47_50_855025580
++ touch out.dat
++ env
++ echo 2012_10_12_10_47_50_855025580
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=160 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_48_37_917868913
++ mkdir 2012_10_12_10_48_37_917868913
++ cd 2012_10_12_10_48_37_917868913
++ touch out.dat
++ env
++ echo 2012_10_12_10_48_37_917868913
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=128 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_49_16_894303347
++ mkdir 2012_10_12_10_49_16_894303347
++ cd 2012_10_12_10_49_16_894303347
++ touch out.dat
++ env
++ echo 2012_10_12_10_49_16_894303347
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=96 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_49_55_889449161
++ mkdir 2012_10_12_10_49_55_889449161
++ cd 2012_10_12_10_49_55_889449161
++ touch out.dat
++ env
++ echo 2012_10_12_10_49_55_889449161
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_50_35_061062998
++ mkdir 2012_10_12_10_50_35_061062998
++ cd 2012_10_12_10_50_35_061062998
++ touch out.dat
++ env
++ echo 2012_10_12_10_50_35_061062998
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=32 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=32
++ '[' 32 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_51_13_124004315
++ mkdir 2012_10_12_10_51_13_124004315
++ cd 2012_10_12_10_51_13_124004315
++ touch out.dat
++ env
++ echo 2012_10_12_10_51_13_124004315
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=512 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_52_05_451116400
++ mkdir 2012_10_12_10_52_05_451116400
++ cd 2012_10_12_10_52_05_451116400
++ touch out.dat
++ env
++ echo 2012_10_12_10_52_05_451116400
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=448 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_52_57_702158461
++ mkdir 2012_10_12_10_52_57_702158461
++ cd 2012_10_12_10_52_57_702158461
++ touch out.dat
++ env
++ echo 2012_10_12_10_52_57_702158461
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=384 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_53_46_794071182
++ mkdir 2012_10_12_10_53_46_794071182
++ cd 2012_10_12_10_53_46_794071182
++ touch out.dat
++ env
++ echo 2012_10_12_10_53_46_794071182
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=320 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_54_34_056295110
++ mkdir 2012_10_12_10_54_34_056295110
++ cd 2012_10_12_10_54_34_056295110
++ touch out.dat
++ env
++ echo 2012_10_12_10_54_34_056295110
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=256 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_55_13_130017467
++ mkdir 2012_10_12_10_55_13_130017467
++ cd 2012_10_12_10_55_13_130017467
++ touch out.dat
++ env
++ echo 2012_10_12_10_55_13_130017467
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=192 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_55_52_210311803
++ mkdir 2012_10_12_10_55_52_210311803
++ cd 2012_10_12_10_55_52_210311803
++ touch out.dat
++ env
++ echo 2012_10_12_10_55_52_210311803
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=128 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_56_31_295468026
++ mkdir 2012_10_12_10_56_31_295468026
++ cd 2012_10_12_10_56_31_295468026
++ touch out.dat
++ env
++ echo 2012_10_12_10_56_31_295468026
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=64
++ '[' 64 -le 32 ']'
++ for pkg in 0x38198 0x038208 0x038280 0x0382f8
++ i=16
++ j=4
++ export MSR_PKG_POWER_LIMIT=0x038208
++ MSR_PKG_POWER_LIMIT=0x038208
++ '[' 4 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_57_09_577173243
++ mkdir 2012_10_12_10_57_09_577173243
++ cd 2012_10_12_10_57_09_577173243
++ touch out.dat
++ env
++ echo 2012_10_12_10_57_09_577173243
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_57_51_101461467
++ mkdir 2012_10_12_10_57_51_101461467
++ cd 2012_10_12_10_57_51_101461467
++ touch out.dat
++ env
++ echo 2012_10_12_10_57_51_101461467
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=56 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_58_31_702248165
++ mkdir 2012_10_12_10_58_31_702248165
++ cd 2012_10_12_10_58_31_702248165
++ touch out.dat
++ env
++ echo 2012_10_12_10_58_31_702248165
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=48 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_59_10_305908955
++ mkdir 2012_10_12_10_59_10_305908955
++ cd 2012_10_12_10_59_10_305908955
++ touch out.dat
++ env
++ echo 2012_10_12_10_59_10_305908955
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=40 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_10_59_47_898969571
++ mkdir 2012_10_12_10_59_47_898969571
++ cd 2012_10_12_10_59_47_898969571
++ touch out.dat
++ env
++ echo 2012_10_12_10_59_47_898969571
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=32 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_00_26_006484382
++ mkdir 2012_10_12_11_00_26_006484382
++ cd 2012_10_12_11_00_26_006484382
++ touch out.dat
++ env
++ echo 2012_10_12_11_00_26_006484382
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=24 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_01_04_080084910
++ mkdir 2012_10_12_11_01_04_080084910
++ cd 2012_10_12_11_01_04_080084910
++ touch out.dat
++ env
++ echo 2012_10_12_11_01_04_080084910
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=16 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_01_42_056047640
++ mkdir 2012_10_12_11_01_42_056047640
++ cd 2012_10_12_11_01_42_056047640
++ touch out.dat
++ env
++ echo 2012_10_12_11_01_42_056047640
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=8 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=8
++ '[' 8 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_02_20_325796111
++ mkdir 2012_10_12_11_02_20_325796111
++ cd 2012_10_12_11_02_20_325796111
++ touch out.dat
++ env
++ echo 2012_10_12_11_02_20_325796111
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=128 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_03_03_409419959
++ mkdir 2012_10_12_11_03_03_409419959
++ cd 2012_10_12_11_03_03_409419959
++ touch out.dat
++ env
++ echo 2012_10_12_11_03_03_409419959
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=112 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_03_44_990968141
++ mkdir 2012_10_12_11_03_44_990968141
++ cd 2012_10_12_11_03_44_990968141
++ touch out.dat
++ env
++ echo 2012_10_12_11_03_44_990968141
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=96 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_04_25_030007378
++ mkdir 2012_10_12_11_04_25_030007378
++ cd 2012_10_12_11_04_25_030007378
++ touch out.dat
++ env
++ echo 2012_10_12_11_04_25_030007378
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=80 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_05_05_793434731
++ mkdir 2012_10_12_11_05_05_793434731
++ cd 2012_10_12_11_05_05_793434731
++ touch out.dat
++ env
++ echo 2012_10_12_11_05_05_793434731
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_05_44_044627329
++ mkdir 2012_10_12_11_05_44_044627329
++ cd 2012_10_12_11_05_44_044627329
++ touch out.dat
++ env
++ echo 2012_10_12_11_05_44_044627329
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=48 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_06_22_265776440
++ mkdir 2012_10_12_11_06_22_265776440
++ cd 2012_10_12_11_06_22_265776440
++ touch out.dat
++ env
++ echo 2012_10_12_11_06_22_265776440
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=32 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_07_00_439240513
++ mkdir 2012_10_12_11_07_00_439240513
++ cd 2012_10_12_11_07_00_439240513
++ touch out.dat
++ env
++ echo 2012_10_12_11_07_00_439240513
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=16 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=16
++ '[' 16 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_07_38_418938782
++ mkdir 2012_10_12_11_07_38_418938782
++ cd 2012_10_12_11_07_38_418938782
++ touch out.dat
++ env
++ echo 2012_10_12_11_07_38_418938782
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=256 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_08_21_684563595
++ mkdir 2012_10_12_11_08_21_684563595
++ cd 2012_10_12_11_08_21_684563595
++ touch out.dat
++ env
++ echo 2012_10_12_11_08_21_684563595
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=224 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_09_04_930506803
++ mkdir 2012_10_12_11_09_04_930506803
++ cd 2012_10_12_11_09_04_930506803
++ touch out.dat
++ env
++ echo 2012_10_12_11_09_04_930506803
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=192 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_09_45_990056479
++ mkdir 2012_10_12_11_09_45_990056479
++ cd 2012_10_12_11_09_45_990056479
++ touch out.dat
++ env
++ echo 2012_10_12_11_09_45_990056479
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=160 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_10_26_951205274
++ mkdir 2012_10_12_11_10_26_951205274
++ cd 2012_10_12_11_10_26_951205274
++ touch out.dat
++ env
++ echo 2012_10_12_11_10_26_951205274
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=128 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_11_05_889948213
++ mkdir 2012_10_12_11_11_05_889948213
++ cd 2012_10_12_11_11_05_889948213
++ touch out.dat
++ env
++ echo 2012_10_12_11_11_05_889948213
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=96 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_11_44_848168938
++ mkdir 2012_10_12_11_11_44_848168938
++ cd 2012_10_12_11_11_44_848168938
++ touch out.dat
++ env
++ echo 2012_10_12_11_11_44_848168938
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_12_23_088606170
++ mkdir 2012_10_12_11_12_23_088606170
++ cd 2012_10_12_11_12_23_088606170
++ touch out.dat
++ env
++ echo 2012_10_12_11_12_23_088606170
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=32 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=32
++ '[' 32 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_13_01_501178213
++ mkdir 2012_10_12_11_13_01_501178213
++ cd 2012_10_12_11_13_01_501178213
++ touch out.dat
++ env
++ echo 2012_10_12_11_13_01_501178213
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=512 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_13_46_491673942
++ mkdir 2012_10_12_11_13_46_491673942
++ cd 2012_10_12_11_13_46_491673942
++ touch out.dat
++ env
++ echo 2012_10_12_11_13_46_491673942
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=448 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_14_30_849013518
++ mkdir 2012_10_12_11_14_30_849013518
++ cd 2012_10_12_11_14_30_849013518
++ touch out.dat
++ env
++ echo 2012_10_12_11_14_30_849013518
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=384 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_15_13_499142007
++ mkdir 2012_10_12_11_15_13_499142007
++ cd 2012_10_12_11_15_13_499142007
++ touch out.dat
++ env
++ echo 2012_10_12_11_15_13_499142007
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=320 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_15_56_426196914
++ mkdir 2012_10_12_11_15_56_426196914
++ cd 2012_10_12_11_15_56_426196914
++ touch out.dat
++ env
++ echo 2012_10_12_11_15_56_426196914
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=256 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_16_36_189624361
++ mkdir 2012_10_12_11_16_36_189624361
++ cd 2012_10_12_11_16_36_189624361
++ touch out.dat
++ env
++ echo 2012_10_12_11_16_36_189624361
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=192 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_17_15_573220560
++ mkdir 2012_10_12_11_17_15_573220560
++ cd 2012_10_12_11_17_15_573220560
++ touch out.dat
++ env
++ echo 2012_10_12_11_17_15_573220560
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=128 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_17_54_588143647
++ mkdir 2012_10_12_11_17_54_588143647
++ cd 2012_10_12_11_17_54_588143647
++ touch out.dat
++ env
++ echo 2012_10_12_11_17_54_588143647
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=64
++ '[' 64 -le 32 ']'
++ for pkg in 0x38198 0x038208 0x038280 0x0382f8
++ i=16
++ j=4
++ export MSR_PKG_POWER_LIMIT=0x038280
++ MSR_PKG_POWER_LIMIT=0x038280
++ '[' 4 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_18_32_793322538
++ mkdir 2012_10_12_11_18_32_793322538
++ cd 2012_10_12_11_18_32_793322538
++ touch out.dat
++ env
++ echo 2012_10_12_11_18_32_793322538
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_19_11_521452580
++ mkdir 2012_10_12_11_19_11_521452580
++ cd 2012_10_12_11_19_11_521452580
++ touch out.dat
++ env
++ echo 2012_10_12_11_19_11_521452580
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=56 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_19_49_169223815
++ mkdir 2012_10_12_11_19_49_169223815
++ cd 2012_10_12_11_19_49_169223815
++ touch out.dat
++ env
++ echo 2012_10_12_11_19_49_169223815
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=48 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_20_26_468488956
++ mkdir 2012_10_12_11_20_26_468488956
++ cd 2012_10_12_11_20_26_468488956
++ touch out.dat
++ env
++ echo 2012_10_12_11_20_26_468488956
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=40 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_21_03_713655729
++ mkdir 2012_10_12_11_21_03_713655729
++ cd 2012_10_12_11_21_03_713655729
++ touch out.dat
++ env
++ echo 2012_10_12_11_21_03_713655729
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=32 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_21_41_834027984
++ mkdir 2012_10_12_11_21_41_834027984
++ cd 2012_10_12_11_21_41_834027984
++ touch out.dat
++ env
++ echo 2012_10_12_11_21_41_834027984
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=24 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_22_19_900920525
++ mkdir 2012_10_12_11_22_19_900920525
++ cd 2012_10_12_11_22_19_900920525
++ touch out.dat
++ env
++ echo 2012_10_12_11_22_19_900920525
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=16 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_22_57_856328924
++ mkdir 2012_10_12_11_22_57_856328924
++ cd 2012_10_12_11_22_57_856328924
++ touch out.dat
++ env
++ echo 2012_10_12_11_22_57_856328924
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=8 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=8
++ '[' 8 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_23_36_177676478
++ mkdir 2012_10_12_11_23_36_177676478
++ cd 2012_10_12_11_23_36_177676478
++ touch out.dat
++ env
++ echo 2012_10_12_11_23_36_177676478
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=128 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_24_15_298200729
++ mkdir 2012_10_12_11_24_15_298200729
++ cd 2012_10_12_11_24_15_298200729
++ touch out.dat
++ env
++ echo 2012_10_12_11_24_15_298200729
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=112 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_24_54_539939167
++ mkdir 2012_10_12_11_24_54_539939167
++ cd 2012_10_12_11_24_54_539939167
++ touch out.dat
++ env
++ echo 2012_10_12_11_24_54_539939167
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=96 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_25_33_637196582
++ mkdir 2012_10_12_11_25_33_637196582
++ cd 2012_10_12_11_25_33_637196582
++ touch out.dat
++ env
++ echo 2012_10_12_11_25_33_637196582
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=80 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_26_11_720232725
++ mkdir 2012_10_12_11_26_11_720232725
++ cd 2012_10_12_11_26_11_720232725
++ touch out.dat
++ env
++ echo 2012_10_12_11_26_11_720232725
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_26_50_293720677
++ mkdir 2012_10_12_11_26_50_293720677
++ cd 2012_10_12_11_26_50_293720677
++ touch out.dat
++ env
++ echo 2012_10_12_11_26_50_293720677
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=48 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_27_28_544667479
++ mkdir 2012_10_12_11_27_28_544667479
++ cd 2012_10_12_11_27_28_544667479
++ touch out.dat
++ env
++ echo 2012_10_12_11_27_28_544667479
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=32 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_28_06_632504222
++ mkdir 2012_10_12_11_28_06_632504222
++ cd 2012_10_12_11_28_06_632504222
++ touch out.dat
++ env
++ echo 2012_10_12_11_28_06_632504222
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=16 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=16
++ '[' 16 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_28_44_675219789
++ mkdir 2012_10_12_11_28_44_675219789
++ cd 2012_10_12_11_28_44_675219789
++ touch out.dat
++ env
++ echo 2012_10_12_11_28_44_675219789
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=256 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_29_24_160783124
++ mkdir 2012_10_12_11_29_24_160783124
++ cd 2012_10_12_11_29_24_160783124
++ touch out.dat
++ env
++ echo 2012_10_12_11_29_24_160783124
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=224 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_30_03_890662481
++ mkdir 2012_10_12_11_30_03_890662481
++ cd 2012_10_12_11_30_03_890662481
++ touch out.dat
++ env
++ echo 2012_10_12_11_30_03_890662481
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=192 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_30_42_867357032
++ mkdir 2012_10_12_11_30_42_867357032
++ cd 2012_10_12_11_30_42_867357032
++ touch out.dat
++ env
++ echo 2012_10_12_11_30_42_867357032
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=160 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_31_23_021428118
++ mkdir 2012_10_12_11_31_23_021428118
++ cd 2012_10_12_11_31_23_021428118
++ touch out.dat
++ env
++ echo 2012_10_12_11_31_23_021428118
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=128 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_32_01_998331047
++ mkdir 2012_10_12_11_32_01_998331047
++ cd 2012_10_12_11_32_01_998331047
++ touch out.dat
++ env
++ echo 2012_10_12_11_32_01_998331047
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=96 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_32_41_131655692
++ mkdir 2012_10_12_11_32_41_131655692
++ cd 2012_10_12_11_32_41_131655692
++ touch out.dat
++ env
++ echo 2012_10_12_11_32_41_131655692
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_33_19_559105842
++ mkdir 2012_10_12_11_33_19_559105842
++ cd 2012_10_12_11_33_19_559105842
++ touch out.dat
++ env
++ echo 2012_10_12_11_33_19_559105842
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=32 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=32
++ '[' 32 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_33_57_701790096
++ mkdir 2012_10_12_11_33_57_701790096
++ cd 2012_10_12_11_33_57_701790096
++ touch out.dat
++ env
++ echo 2012_10_12_11_33_57_701790096
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=512 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_34_38_533447239
++ mkdir 2012_10_12_11_34_38_533447239
++ cd 2012_10_12_11_34_38_533447239
++ touch out.dat
++ env
++ echo 2012_10_12_11_34_38_533447239
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=448 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_35_19_806190038
++ mkdir 2012_10_12_11_35_19_806190038
++ cd 2012_10_12_11_35_19_806190038
++ touch out.dat
++ env
++ echo 2012_10_12_11_35_19_806190038
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=384 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_36_00_226876249
++ mkdir 2012_10_12_11_36_00_226876249
++ cd 2012_10_12_11_36_00_226876249
++ touch out.dat
++ env
++ echo 2012_10_12_11_36_00_226876249
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=320 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_36_40_898226604
++ mkdir 2012_10_12_11_36_40_898226604
++ cd 2012_10_12_11_36_40_898226604
++ touch out.dat
++ env
++ echo 2012_10_12_11_36_40_898226604
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=256 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_37_19_840098580
++ mkdir 2012_10_12_11_37_19_840098580
++ cd 2012_10_12_11_37_19_840098580
++ touch out.dat
++ env
++ echo 2012_10_12_11_37_19_840098580
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=192 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_37_59_129827071
++ mkdir 2012_10_12_11_37_59_129827071
++ cd 2012_10_12_11_37_59_129827071
++ touch out.dat
++ env
++ echo 2012_10_12_11_37_59_129827071
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=128 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_38_38_171363104
++ mkdir 2012_10_12_11_38_38_171363104
++ cd 2012_10_12_11_38_38_171363104
++ touch out.dat
++ env
++ echo 2012_10_12_11_38_38_171363104
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=64
++ '[' 64 -le 32 ']'
++ for pkg in 0x38198 0x038208 0x038280 0x0382f8
++ i=16
++ j=4
++ export MSR_PKG_POWER_LIMIT=0x0382f8
++ MSR_PKG_POWER_LIMIT=0x0382f8
++ '[' 4 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_39_16_352317695
++ mkdir 2012_10_12_11_39_16_352317695
++ cd 2012_10_12_11_39_16_352317695
++ touch out.dat
++ env
++ echo 2012_10_12_11_39_16_352317695
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_39_55_033968763
++ mkdir 2012_10_12_11_39_55_033968763
++ cd 2012_10_12_11_39_55_033968763
++ touch out.dat
++ env
++ echo 2012_10_12_11_39_55_033968763
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=56 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_40_32_931842305
++ mkdir 2012_10_12_11_40_32_931842305
++ cd 2012_10_12_11_40_32_931842305
++ touch out.dat
++ env
++ echo 2012_10_12_11_40_32_931842305
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=48 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_41_11_250504419
++ mkdir 2012_10_12_11_41_11_250504419
++ cd 2012_10_12_11_41_11_250504419
++ touch out.dat
++ env
++ echo 2012_10_12_11_41_11_250504419
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=40 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_41_49_492159913
++ mkdir 2012_10_12_11_41_49_492159913
++ cd 2012_10_12_11_41_49_492159913
++ touch out.dat
++ env
++ echo 2012_10_12_11_41_49_492159913
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=32 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_42_27_579764040
++ mkdir 2012_10_12_11_42_27_579764040
++ cd 2012_10_12_11_42_27_579764040
++ touch out.dat
++ env
++ echo 2012_10_12_11_42_27_579764040
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=24 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_43_05_673978679
++ mkdir 2012_10_12_11_43_05_673978679
++ cd 2012_10_12_11_43_05_673978679
++ touch out.dat
++ env
++ echo 2012_10_12_11_43_05_673978679
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=16 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_43_43_964539820
++ mkdir 2012_10_12_11_43_43_964539820
++ cd 2012_10_12_11_43_43_964539820
++ touch out.dat
++ env
++ echo 2012_10_12_11_43_43_964539820
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 0
++ srun --nodes=4 --ntasks=8 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=8
++ '[' 8 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_44_23_629665554
++ mkdir 2012_10_12_11_44_23_629665554
++ cd 2012_10_12_11_44_23_629665554
++ touch out.dat
++ env
++ echo 2012_10_12_11_44_23_629665554
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=128 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_45_02_777297701
++ mkdir 2012_10_12_11_45_02_777297701
++ cd 2012_10_12_11_45_02_777297701
++ touch out.dat
++ env
++ echo 2012_10_12_11_45_02_777297701
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=112 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_45_41_284636106
++ mkdir 2012_10_12_11_45_41_284636106
++ cd 2012_10_12_11_45_41_284636106
++ touch out.dat
++ env
++ echo 2012_10_12_11_45_41_284636106
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=96 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_46_20_587634315
++ mkdir 2012_10_12_11_46_20_587634315
++ cd 2012_10_12_11_46_20_587634315
++ touch out.dat
++ env
++ echo 2012_10_12_11_46_20_587634315
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=80 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_46_59_177922741
++ mkdir 2012_10_12_11_46_59_177922741
++ cd 2012_10_12_11_46_59_177922741
++ touch out.dat
++ env
++ echo 2012_10_12_11_46_59_177922741
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_47_37_508391676
++ mkdir 2012_10_12_11_47_37_508391676
++ cd 2012_10_12_11_47_37_508391676
++ touch out.dat
++ env
++ echo 2012_10_12_11_47_37_508391676
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=48 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_48_15_689761758
++ mkdir 2012_10_12_11_48_15_689761758
++ cd 2012_10_12_11_48_15_689761758
++ touch out.dat
++ env
++ echo 2012_10_12_11_48_15_689761758
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=32 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_48_53_798024585
++ mkdir 2012_10_12_11_48_53_798024585
++ cd 2012_10_12_11_48_53_798024585
++ touch out.dat
++ env
++ echo 2012_10_12_11_48_53_798024585
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 0
++ srun --nodes=8 --ntasks=16 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=16
++ '[' 16 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_49_31_811212562
++ mkdir 2012_10_12_11_49_31_811212562
++ cd 2012_10_12_11_49_31_811212562
++ touch out.dat
++ env
++ echo 2012_10_12_11_49_31_811212562
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=256 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_50_12_324255394
++ mkdir 2012_10_12_11_50_12_324255394
++ cd 2012_10_12_11_50_12_324255394
++ touch out.dat
++ env
++ echo 2012_10_12_11_50_12_324255394
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=224 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_50_51_912503548
++ mkdir 2012_10_12_11_50_51_912503548
++ cd 2012_10_12_11_50_51_912503548
++ touch out.dat
++ env
++ echo 2012_10_12_11_50_51_912503548
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=192 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_51_31_903928340
++ mkdir 2012_10_12_11_51_31_903928340
++ cd 2012_10_12_11_51_31_903928340
++ touch out.dat
++ env
++ echo 2012_10_12_11_51_31_903928340
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=160 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_52_11_132839825
++ mkdir 2012_10_12_11_52_11_132839825
++ cd 2012_10_12_11_52_11_132839825
++ touch out.dat
++ env
++ echo 2012_10_12_11_52_11_132839825
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=128 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_52_50_071387737
++ mkdir 2012_10_12_11_52_50_071387737
++ cd 2012_10_12_11_52_50_071387737
++ touch out.dat
++ env
++ echo 2012_10_12_11_52_50_071387737
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=96 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_53_29_052537753
++ mkdir 2012_10_12_11_53_29_052537753
++ cd 2012_10_12_11_53_29_052537753
++ touch out.dat
++ env
++ echo 2012_10_12_11_53_29_052537753
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_54_07_302628407
++ mkdir 2012_10_12_11_54_07_302628407
++ cd 2012_10_12_11_54_07_302628407
++ touch out.dat
++ env
++ echo 2012_10_12_11_54_07_302628407
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 0
++ srun --nodes=16 --ntasks=32 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=32
++ '[' 32 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_54_46_231770939
++ mkdir 2012_10_12_11_54_46_231770939
++ cd 2012_10_12_11_54_46_231770939
++ touch out.dat
++ env
++ echo 2012_10_12_11_54_46_231770939
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=512 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_55_26_843946291
++ mkdir 2012_10_12_11_55_26_843946291
++ cd 2012_10_12_11_55_26_843946291
++ touch out.dat
++ env
++ echo 2012_10_12_11_55_26_843946291
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=448 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_56_07_987204523
++ mkdir 2012_10_12_11_56_07_987204523
++ cd 2012_10_12_11_56_07_987204523
++ touch out.dat
++ env
++ echo 2012_10_12_11_56_07_987204523
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=384 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_56_48_208892107
++ mkdir 2012_10_12_11_56_48_208892107
++ cd 2012_10_12_11_56_48_208892107
++ touch out.dat
++ env
++ echo 2012_10_12_11_56_48_208892107
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=320 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_57_28_106314126
++ mkdir 2012_10_12_11_57_28_106314126
++ cd 2012_10_12_11_57_28_106314126
++ touch out.dat
++ env
++ echo 2012_10_12_11_57_28_106314126
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=256 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_58_07_284818626
++ mkdir 2012_10_12_11_58_07_284818626
++ cd 2012_10_12_11_58_07_284818626
++ touch out.dat
++ env
++ echo 2012_10_12_11_58_07_284818626
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=192 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_58_46_550186831
++ mkdir 2012_10_12_11_58_46_550186831
++ cd 2012_10_12_11_58_46_550186831
++ touch out.dat
++ env
++ echo 2012_10_12_11_58_46_550186831
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=128 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_11_59_25_876825939
++ mkdir 2012_10_12_11_59_25_876825939
++ cd 2012_10_12_11_59_25_876825939
++ touch out.dat
++ env
++ echo 2012_10_12_11_59_25_876825939
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 0
++ srun --nodes=32 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=64
++ '[' 64 -le 32 ']'
++ for t in 0 1
++ export TURBO_ENABLE=1
++ TURBO_ENABLE=1
++ export READ_WRITE=0
++ READ_WRITE=0
++ export READ_ONLY=1
++ READ_ONLY=1
++ i=16
++ j=4
++ '[' 4 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_00_04_078162027
++ mkdir 2012_10_12_12_00_04_078162027
++ cd 2012_10_12_12_00_04_078162027
++ touch out.dat
++ env
++ echo 2012_10_12_12_00_04_078162027
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_00_38_635356060
++ mkdir 2012_10_12_12_00_38_635356060
++ cd 2012_10_12_12_00_38_635356060
++ touch out.dat
++ env
++ echo 2012_10_12_12_00_38_635356060
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=56 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_01_12_124989803
++ mkdir 2012_10_12_12_01_12_124989803
++ cd 2012_10_12_12_01_12_124989803
++ touch out.dat
++ env
++ echo 2012_10_12_12_01_12_124989803
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=48 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_01_46_823621554
++ mkdir 2012_10_12_12_01_46_823621554
++ cd 2012_10_12_12_01_46_823621554
++ touch out.dat
++ env
++ echo 2012_10_12_12_01_46_823621554
++ uname -a
++ grep MHz
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=40 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_02_20_630578417
++ mkdir 2012_10_12_12_02_20_630578417
++ cd 2012_10_12_12_02_20_630578417
++ touch out.dat
++ env
++ echo 2012_10_12_12_02_20_630578417
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=32 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_02_53_004146402
++ mkdir 2012_10_12_12_02_53_004146402
++ cd 2012_10_12_12_02_53_004146402
++ touch out.dat
++ env
++ echo 2012_10_12_12_02_53_004146402
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=24 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_03_25_062127773
++ mkdir 2012_10_12_12_03_25_062127773
++ cd 2012_10_12_12_03_25_062127773
++ touch out.dat
++ env
++ echo 2012_10_12_12_03_25_062127773
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=16 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_03_57_026221676
++ mkdir 2012_10_12_12_03_57_026221676
++ cd 2012_10_12_12_03_57_026221676
++ touch out.dat
++ env
++ echo 2012_10_12_12_03_57_026221676
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=8 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=8
++ '[' 8 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_04_29_319201601
++ mkdir 2012_10_12_12_04_29_319201601
++ cd 2012_10_12_12_04_29_319201601
++ touch out.dat
++ env
++ echo 2012_10_12_12_04_29_319201601
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=128 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_05_04_604868395
++ mkdir 2012_10_12_12_05_04_604868395
++ cd 2012_10_12_12_05_04_604868395
++ touch out.dat
++ env
++ echo 2012_10_12_12_05_04_604868395
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=112 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_05_40_044943795
++ mkdir 2012_10_12_12_05_40_044943795
++ cd 2012_10_12_12_05_40_044943795
++ touch out.dat
++ env
++ echo 2012_10_12_12_05_40_044943795
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=96 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_06_14_795348348
++ mkdir 2012_10_12_12_06_14_795348348
++ cd 2012_10_12_12_06_14_795348348
++ touch out.dat
++ env
++ echo 2012_10_12_12_06_14_795348348
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=80 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_06_49_222492266
++ mkdir 2012_10_12_12_06_49_222492266
++ cd 2012_10_12_12_06_49_222492266
++ touch out.dat
++ env
++ echo 2012_10_12_12_06_49_222492266
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_07_21_595926078
++ mkdir 2012_10_12_12_07_21_595926078
++ cd 2012_10_12_12_07_21_595926078
++ touch out.dat
++ env
++ echo 2012_10_12_12_07_21_595926078
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=48 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_07_53_865098321
++ mkdir 2012_10_12_12_07_53_865098321
++ cd 2012_10_12_12_07_53_865098321
++ touch out.dat
++ env
++ echo 2012_10_12_12_07_53_865098321
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=32 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_08_25_341829736
++ mkdir 2012_10_12_12_08_25_341829736
++ cd 2012_10_12_12_08_25_341829736
++ touch out.dat
++ env
++ echo 2012_10_12_12_08_25_341829736
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=16 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=16
++ '[' 16 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_08_56_685308473
++ mkdir 2012_10_12_12_08_56_685308473
++ cd 2012_10_12_12_08_56_685308473
++ touch out.dat
++ env
++ echo 2012_10_12_12_08_56_685308473
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=256 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_09_31_956995179
++ mkdir 2012_10_12_12_09_31_956995179
++ cd 2012_10_12_12_09_31_956995179
++ touch out.dat
++ env
++ echo 2012_10_12_12_09_31_956995179
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=224 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_10_07_154074953
++ mkdir 2012_10_12_12_10_07_154074953
++ cd 2012_10_12_12_10_07_154074953
++ touch out.dat
++ env
++ echo 2012_10_12_12_10_07_154074953
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=192 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_10_41_748553258
++ mkdir 2012_10_12_12_10_41_748553258
++ cd 2012_10_12_12_10_41_748553258
++ touch out.dat
++ env
++ echo 2012_10_12_12_10_41_748553258
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=160 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_11_16_385174212
++ mkdir 2012_10_12_12_11_16_385174212
++ cd 2012_10_12_12_11_16_385174212
++ touch out.dat
++ env
++ echo 2012_10_12_12_11_16_385174212
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=128 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_11_49_342120630
++ mkdir 2012_10_12_12_11_49_342120630
++ cd 2012_10_12_12_11_49_342120630
++ touch out.dat
++ env
++ echo 2012_10_12_12_11_49_342120630
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=96 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_12_22_473459859
++ mkdir 2012_10_12_12_12_22_473459859
++ cd 2012_10_12_12_12_22_473459859
++ touch out.dat
++ env
++ echo 2012_10_12_12_12_22_473459859
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_12_54_058521401
++ mkdir 2012_10_12_12_12_54_058521401
++ cd 2012_10_12_12_12_54_058521401
++ touch out.dat
++ env
++ echo 2012_10_12_12_12_54_058521401
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=32 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=32
++ '[' 32 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_13_25_636723024
++ mkdir 2012_10_12_12_13_25_636723024
++ cd 2012_10_12_12_13_25_636723024
++ touch out.dat
++ env
++ echo 2012_10_12_12_13_25_636723024
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=512 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_14_02_691138190
++ mkdir 2012_10_12_12_14_02_691138190
++ cd 2012_10_12_12_14_02_691138190
++ touch out.dat
++ env
++ echo 2012_10_12_12_14_02_691138190
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=448 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_14_39_419997945
++ mkdir 2012_10_12_12_14_39_419997945
++ cd 2012_10_12_12_14_39_419997945
++ touch out.dat
++ env
++ echo 2012_10_12_12_14_39_419997945
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=384 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_15_15_384633039
++ mkdir 2012_10_12_12_15_15_384633039
++ cd 2012_10_12_12_15_15_384633039
++ touch out.dat
++ env
++ echo 2012_10_12_12_15_15_384633039
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=320 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_15_51_059659978
++ mkdir 2012_10_12_12_15_51_059659978
++ cd 2012_10_12_12_15_51_059659978
++ touch out.dat
++ env
++ echo 2012_10_12_12_15_51_059659978
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=256 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_16_24_014971709
++ mkdir 2012_10_12_12_16_24_014971709
++ cd 2012_10_12_12_16_24_014971709
++ touch out.dat
++ env
++ echo 2012_10_12_12_16_24_014971709
++ uname -a
++ grep MHz
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=192 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_16_57_163591409
++ mkdir 2012_10_12_12_16_57_163591409
++ cd 2012_10_12_12_16_57_163591409
++ touch out.dat
++ env
++ echo 2012_10_12_12_16_57_163591409
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=128 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_17_29_594641985
++ mkdir 2012_10_12_12_17_29_594641985
++ cd 2012_10_12_12_17_29_594641985
++ touch out.dat
++ env
++ echo 2012_10_12_12_17_29_594641985
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=64
++ '[' 64 -le 32 ']'
++ export READ_WRITE=1
++ READ_WRITE=1
++ export READ_ONLY=0
++ READ_ONLY=0
++ for pkg in 0x38198 0x038208 0x038280 0x0382f8
++ i=16
++ j=4
++ export MSR_PKG_POWER_LIMIT=0x38198
++ MSR_PKG_POWER_LIMIT=0x38198
++ '[' 4 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_18_00_973925436
++ mkdir 2012_10_12_12_18_00_973925436
++ cd 2012_10_12_12_18_00_973925436
++ touch out.dat
++ env
++ echo 2012_10_12_12_18_00_973925436
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_18_51_327264168
++ mkdir 2012_10_12_12_18_51_327264168
++ cd 2012_10_12_12_18_51_327264168
++ touch out.dat
++ env
++ echo 2012_10_12_12_18_51_327264168
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=56 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_19_40_092332675
++ mkdir 2012_10_12_12_19_40_092332675
++ cd 2012_10_12_12_19_40_092332675
++ touch out.dat
++ env
++ echo 2012_10_12_12_19_40_092332675
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=48 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_20_26_387500297
++ mkdir 2012_10_12_12_20_26_387500297
++ cd 2012_10_12_12_20_26_387500297
++ touch out.dat
++ env
++ echo 2012_10_12_12_20_26_387500297
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=40 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_21_13_086158889
++ mkdir 2012_10_12_12_21_13_086158889
++ cd 2012_10_12_12_21_13_086158889
++ touch out.dat
++ env
++ echo 2012_10_12_12_21_13_086158889
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=32 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_21_50_536680647
++ mkdir 2012_10_12_12_21_50_536680647
++ cd 2012_10_12_12_21_50_536680647
++ touch out.dat
++ env
++ echo 2012_10_12_12_21_50_536680647
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=24 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_22_28_251757872
++ mkdir 2012_10_12_12_22_28_251757872
++ cd 2012_10_12_12_22_28_251757872
++ touch out.dat
++ env
++ echo 2012_10_12_12_22_28_251757872
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=16 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_23_00_161299307
++ mkdir 2012_10_12_12_23_00_161299307
++ cd 2012_10_12_12_23_00_161299307
++ touch out.dat
++ env
++ echo 2012_10_12_12_23_00_161299307
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=8 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=8
++ '[' 8 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_23_31_726013085
++ mkdir 2012_10_12_12_23_31_726013085
++ cd 2012_10_12_12_23_31_726013085
++ touch out.dat
++ env
++ echo 2012_10_12_12_23_31_726013085
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=128 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_24_23_164478513
++ mkdir 2012_10_12_12_24_23_164478513
++ cd 2012_10_12_12_24_23_164478513
++ touch out.dat
++ env
++ echo 2012_10_12_12_24_23_164478513
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=112 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_25_14_784160485
++ mkdir 2012_10_12_12_25_14_784160485
++ cd 2012_10_12_12_25_14_784160485
++ touch out.dat
++ env
++ echo 2012_10_12_12_25_14_784160485
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=96 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_26_01_972724834
++ mkdir 2012_10_12_12_26_01_972724834
++ cd 2012_10_12_12_26_01_972724834
++ touch out.dat
++ env
++ echo 2012_10_12_12_26_01_972724834
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=80 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_26_47_401895326
++ mkdir 2012_10_12_12_26_47_401895326
++ cd 2012_10_12_12_26_47_401895326
++ touch out.dat
++ env
++ echo 2012_10_12_12_26_47_401895326
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_27_25_511771793
++ mkdir 2012_10_12_12_27_25_511771793
++ cd 2012_10_12_12_27_25_511771793
++ touch out.dat
++ env
++ echo 2012_10_12_12_27_25_511771793
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=48 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_28_03_426698804
++ mkdir 2012_10_12_12_28_03_426698804
++ cd 2012_10_12_12_28_03_426698804
++ touch out.dat
++ env
++ echo 2012_10_12_12_28_03_426698804
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=32 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_28_35_787779853
++ mkdir 2012_10_12_12_28_35_787779853
++ cd 2012_10_12_12_28_35_787779853
++ touch out.dat
++ env
++ echo 2012_10_12_12_28_35_787779853
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=16 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=16
++ '[' 16 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_29_06_955034354
++ mkdir 2012_10_12_12_29_06_955034354
++ cd 2012_10_12_12_29_06_955034354
++ touch out.dat
++ env
++ echo 2012_10_12_12_29_06_955034354
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=256 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_29_58_779364901
++ mkdir 2012_10_12_12_29_58_779364901
++ cd 2012_10_12_12_29_58_779364901
++ touch out.dat
++ env
++ echo 2012_10_12_12_29_58_779364901
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=224 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_30_48_262018148
++ mkdir 2012_10_12_12_30_48_262018148
++ cd 2012_10_12_12_30_48_262018148
++ touch out.dat
++ env
++ echo 2012_10_12_12_30_48_262018148
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=192 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_31_35_843824571
++ mkdir 2012_10_12_12_31_35_843824571
++ cd 2012_10_12_12_31_35_843824571
++ touch out.dat
++ env
++ echo 2012_10_12_12_31_35_843824571
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=160 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_32_24_374058079
++ mkdir 2012_10_12_12_32_24_374058079
++ cd 2012_10_12_12_32_24_374058079
++ touch out.dat
++ env
++ echo 2012_10_12_12_32_24_374058079
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=128 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_33_02_977076443
++ mkdir 2012_10_12_12_33_02_977076443
++ cd 2012_10_12_12_33_02_977076443
++ touch out.dat
++ env
++ echo 2012_10_12_12_33_02_977076443
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=96 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_33_41_408969051
++ mkdir 2012_10_12_12_33_41_408969051
++ cd 2012_10_12_12_33_41_408969051
++ touch out.dat
++ env
++ echo 2012_10_12_12_33_41_408969051
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_34_12_943403631
++ mkdir 2012_10_12_12_34_12_943403631
++ cd 2012_10_12_12_34_12_943403631
++ touch out.dat
++ env
++ echo 2012_10_12_12_34_12_943403631
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=32 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=32
++ '[' 32 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_34_44_433045771
++ mkdir 2012_10_12_12_34_44_433045771
++ cd 2012_10_12_12_34_44_433045771
++ touch out.dat
++ env
++ echo 2012_10_12_12_34_44_433045771
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=512 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_36_37_181598731
++ mkdir 2012_10_12_12_36_37_181598731
++ cd 2012_10_12_12_36_37_181598731
++ touch out.dat
++ env
++ echo 2012_10_12_12_36_37_181598731
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=448 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_37_29_402478312
++ mkdir 2012_10_12_12_37_29_402478312
++ cd 2012_10_12_12_37_29_402478312
++ touch out.dat
++ env
++ echo 2012_10_12_12_37_29_402478312
++ uname -a
++ grep MHz
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=384 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_38_20_267561016
++ mkdir 2012_10_12_12_38_20_267561016
++ cd 2012_10_12_12_38_20_267561016
++ touch out.dat
++ env
++ echo 2012_10_12_12_38_20_267561016
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=320 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_39_10_256718167
++ mkdir 2012_10_12_12_39_10_256718167
++ cd 2012_10_12_12_39_10_256718167
++ touch out.dat
++ env
++ echo 2012_10_12_12_39_10_256718167
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=256 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_39_48_372944420
++ mkdir 2012_10_12_12_39_48_372944420
++ cd 2012_10_12_12_39_48_372944420
++ touch out.dat
++ env
++ echo 2012_10_12_12_39_48_372944420
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=192 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_40_26_517614240
++ mkdir 2012_10_12_12_40_26_517614240
++ cd 2012_10_12_12_40_26_517614240
++ touch out.dat
++ env
++ echo 2012_10_12_12_40_26_517614240
++ uname -a
++ grep MHz
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=128 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_40_59_191742528
++ mkdir 2012_10_12_12_40_59_191742528
++ cd 2012_10_12_12_40_59_191742528
++ touch out.dat
++ env
++ echo 2012_10_12_12_40_59_191742528
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=64
++ '[' 64 -le 32 ']'
++ for pkg in 0x38198 0x038208 0x038280 0x0382f8
++ i=16
++ j=4
++ export MSR_PKG_POWER_LIMIT=0x038208
++ MSR_PKG_POWER_LIMIT=0x038208
++ '[' 4 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_41_31_620125656
++ mkdir 2012_10_12_12_41_31_620125656
++ cd 2012_10_12_12_41_31_620125656
++ touch out.dat
++ env
++ echo 2012_10_12_12_41_31_620125656
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_42_14_664878001
++ mkdir 2012_10_12_12_42_14_664878001
++ cd 2012_10_12_12_42_14_664878001
++ touch out.dat
++ env
++ echo 2012_10_12_12_42_14_664878001
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=56 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_42_54_584739610
++ mkdir 2012_10_12_12_42_54_584739610
++ cd 2012_10_12_12_42_54_584739610
++ touch out.dat
++ env
++ echo 2012_10_12_12_42_54_584739610
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=48 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_43_34_596703977
++ mkdir 2012_10_12_12_43_34_596703977
++ cd 2012_10_12_12_43_34_596703977
++ touch out.dat
++ env
++ echo 2012_10_12_12_43_34_596703977
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=40 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_44_13_228637280
++ mkdir 2012_10_12_12_44_13_228637280
++ cd 2012_10_12_12_44_13_228637280
++ touch out.dat
++ env
++ echo 2012_10_12_12_44_13_228637280
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=32 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_44_46_073640570
++ mkdir 2012_10_12_12_44_46_073640570
++ cd 2012_10_12_12_44_46_073640570
++ touch out.dat
++ env
++ echo 2012_10_12_12_44_46_073640570
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=24 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_45_18_995054110
++ mkdir 2012_10_12_12_45_18_995054110
++ cd 2012_10_12_12_45_18_995054110
++ touch out.dat
++ env
++ echo 2012_10_12_12_45_18_995054110
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=16 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_45_50_818185035
++ mkdir 2012_10_12_12_45_50_818185035
++ cd 2012_10_12_12_45_50_818185035
++ touch out.dat
++ env
++ echo 2012_10_12_12_45_50_818185035
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=8 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=8
++ '[' 8 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_46_22_615464951
++ mkdir 2012_10_12_12_46_22_615464951
++ cd 2012_10_12_12_46_22_615464951
++ touch out.dat
++ env
++ echo 2012_10_12_12_46_22_615464951
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=128 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_48_06_362438161
++ mkdir 2012_10_12_12_48_06_362438161
++ cd 2012_10_12_12_48_06_362438161
++ touch out.dat
++ env
++ echo 2012_10_12_12_48_06_362438161
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=112 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_48_48_576887643
++ mkdir 2012_10_12_12_48_48_576887643
++ cd 2012_10_12_12_48_48_576887643
++ touch out.dat
++ env
++ echo 2012_10_12_12_48_48_576887643
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=96 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_49_30_149660400
++ mkdir 2012_10_12_12_49_30_149660400
++ cd 2012_10_12_12_49_30_149660400
++ touch out.dat
++ env
++ echo 2012_10_12_12_49_30_149660400
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=80 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_50_09_051392091
++ mkdir 2012_10_12_12_50_09_051392091
++ cd 2012_10_12_12_50_09_051392091
++ touch out.dat
++ env
++ echo 2012_10_12_12_50_09_051392091
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_50_42_211628015
++ mkdir 2012_10_12_12_50_42_211628015
++ cd 2012_10_12_12_50_42_211628015
++ touch out.dat
++ env
++ echo 2012_10_12_12_50_42_211628015
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=48 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_51_15_094404429
++ mkdir 2012_10_12_12_51_15_094404429
++ cd 2012_10_12_12_51_15_094404429
++ touch out.dat
++ env
++ echo 2012_10_12_12_51_15_094404429
++ uname -a
++ grep MHz
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=32 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_51_47_074345484
++ mkdir 2012_10_12_12_51_47_074345484
++ cd 2012_10_12_12_51_47_074345484
++ touch out.dat
++ env
++ echo 2012_10_12_12_51_47_074345484
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=16 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=16
++ '[' 16 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_52_18_426149721
++ mkdir 2012_10_12_12_52_18_426149721
++ cd 2012_10_12_12_52_18_426149721
++ touch out.dat
++ env
++ echo 2012_10_12_12_52_18_426149721
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=256 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_53_01_941491516
++ mkdir 2012_10_12_12_53_01_941491516
++ cd 2012_10_12_12_53_01_941491516
++ touch out.dat
++ env
++ echo 2012_10_12_12_53_01_941491516
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=224 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_53_45_423193051
++ mkdir 2012_10_12_12_53_45_423193051
++ cd 2012_10_12_12_53_45_423193051
++ touch out.dat
++ env
++ echo 2012_10_12_12_53_45_423193051
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=192 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_54_26_185353309
++ mkdir 2012_10_12_12_54_26_185353309
++ cd 2012_10_12_12_54_26_185353309
++ touch out.dat
++ env
++ echo 2012_10_12_12_54_26_185353309
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=160 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_55_08_268726887
++ mkdir 2012_10_12_12_55_08_268726887
++ cd 2012_10_12_12_55_08_268726887
++ touch out.dat
++ env
++ echo 2012_10_12_12_55_08_268726887
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=128 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_55_41_850607412
++ mkdir 2012_10_12_12_55_41_850607412
++ cd 2012_10_12_12_55_41_850607412
++ touch out.dat
++ env
++ echo 2012_10_12_12_55_41_850607412
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=96 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_56_15_382153585
++ mkdir 2012_10_12_12_56_15_382153585
++ cd 2012_10_12_12_56_15_382153585
++ touch out.dat
++ env
++ echo 2012_10_12_12_56_15_382153585
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_56_46_961368327
++ mkdir 2012_10_12_12_56_46_961368327
++ cd 2012_10_12_12_56_46_961368327
++ touch out.dat
++ env
++ echo 2012_10_12_12_56_46_961368327
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=32 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=32
++ '[' 32 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_57_18_301514600
++ mkdir 2012_10_12_12_57_18_301514600
++ cd 2012_10_12_12_57_18_301514600
++ touch out.dat
++ env
++ echo 2012_10_12_12_57_18_301514600
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=512 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_58_03_959473108
++ mkdir 2012_10_12_12_58_03_959473108
++ cd 2012_10_12_12_58_03_959473108
++ touch out.dat
++ env
++ echo 2012_10_12_12_58_03_959473108
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=448 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_58_48_786448313
++ mkdir 2012_10_12_12_58_48_786448313
++ cd 2012_10_12_12_58_48_786448313
++ touch out.dat
++ env
++ echo 2012_10_12_12_58_48_786448313
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=384 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_12_59_31_055754744
++ mkdir 2012_10_12_12_59_31_055754744
++ cd 2012_10_12_12_59_31_055754744
++ touch out.dat
++ env
++ echo 2012_10_12_12_59_31_055754744
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=320 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_00_12_892572637
++ mkdir 2012_10_12_13_00_12_892572637
++ cd 2012_10_12_13_00_12_892572637
++ touch out.dat
++ env
++ echo 2012_10_12_13_00_12_892572637
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=256 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_00_47_005345552
++ mkdir 2012_10_12_13_00_47_005345552
++ cd 2012_10_12_13_00_47_005345552
++ touch out.dat
++ env
++ echo 2012_10_12_13_00_47_005345552
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=192 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_01_21_273694963
++ mkdir 2012_10_12_13_01_21_273694963
++ cd 2012_10_12_13_01_21_273694963
++ touch out.dat
++ env
++ echo 2012_10_12_13_01_21_273694963
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=128 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_01_53_642424322
++ mkdir 2012_10_12_13_01_53_642424322
++ cd 2012_10_12_13_01_53_642424322
++ touch out.dat
++ env
++ echo 2012_10_12_13_01_53_642424322
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=64
++ '[' 64 -le 32 ']'
++ for pkg in 0x38198 0x038208 0x038280 0x0382f8
++ i=16
++ j=4
++ export MSR_PKG_POWER_LIMIT=0x038280
++ MSR_PKG_POWER_LIMIT=0x038280
++ '[' 4 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_02_24_969891760
++ mkdir 2012_10_12_13_02_24_969891760
++ cd 2012_10_12_13_02_24_969891760
++ touch out.dat
++ env
++ echo 2012_10_12_13_02_24_969891760
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_03_02_940475450
++ mkdir 2012_10_12_13_03_02_940475450
++ cd 2012_10_12_13_03_02_940475450
++ touch out.dat
++ env
++ echo 2012_10_12_13_03_02_940475450
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=56 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_03_39_621256946
++ mkdir 2012_10_12_13_03_39_621256946
++ cd 2012_10_12_13_03_39_621256946
++ touch out.dat
++ env
++ echo 2012_10_12_13_03_39_621256946
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=48 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_04_16_901521405
++ mkdir 2012_10_12_13_04_16_901521405
++ cd 2012_10_12_13_04_16_901521405
++ touch out.dat
++ env
++ echo 2012_10_12_13_04_16_901521405
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=40 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_04_52_739321399
++ mkdir 2012_10_12_13_04_52_739321399
++ cd 2012_10_12_13_04_52_739321399
++ touch out.dat
++ env
++ echo 2012_10_12_13_04_52_739321399
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=32 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_05_24_859498200
++ mkdir 2012_10_12_13_05_24_859498200
++ cd 2012_10_12_13_05_24_859498200
++ touch out.dat
++ env
++ echo 2012_10_12_13_05_24_859498200
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=24 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_05_57_679837787
++ mkdir 2012_10_12_13_05_57_679837787
++ cd 2012_10_12_13_05_57_679837787
++ touch out.dat
++ env
++ echo 2012_10_12_13_05_57_679837787
++ uname -a
++ grep MHz
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=16 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_06_29_810383726
++ mkdir 2012_10_12_13_06_29_810383726
++ cd 2012_10_12_13_06_29_810383726
++ touch out.dat
++ env
++ echo 2012_10_12_13_06_29_810383726
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=8 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=8
++ '[' 8 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_07_01_930110565
++ mkdir 2012_10_12_13_07_01_930110565
++ cd 2012_10_12_13_07_01_930110565
++ touch out.dat
++ env
++ echo 2012_10_12_13_07_01_930110565
++ uname -a
++ grep MHz
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=128 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_07_39_774856285
++ mkdir 2012_10_12_13_07_39_774856285
++ cd 2012_10_12_13_07_39_774856285
++ touch out.dat
++ env
++ echo 2012_10_12_13_07_39_774856285
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=112 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_08_17_682006226
++ mkdir 2012_10_12_13_08_17_682006226
++ cd 2012_10_12_13_08_17_682006226
++ touch out.dat
++ env
++ echo 2012_10_12_13_08_17_682006226
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=96 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_08_55_168506036
++ mkdir 2012_10_12_13_08_55_168506036
++ cd 2012_10_12_13_08_55_168506036
++ touch out.dat
++ env
++ echo 2012_10_12_13_08_55_168506036
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=80 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_09_30_894611610
++ mkdir 2012_10_12_13_09_30_894611610
++ cd 2012_10_12_13_09_30_894611610
++ touch out.dat
++ env
++ echo 2012_10_12_13_09_30_894611610
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_10_03_279332909
++ mkdir 2012_10_12_13_10_03_279332909
++ cd 2012_10_12_13_10_03_279332909
++ touch out.dat
++ env
++ echo 2012_10_12_13_10_03_279332909
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=48 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_10_35_529230183
++ mkdir 2012_10_12_13_10_35_529230183
++ cd 2012_10_12_13_10_35_529230183
++ touch out.dat
++ env
++ echo 2012_10_12_13_10_35_529230183
++ uname -a
++ grep MHz
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=32 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_11_07_066554200
++ mkdir 2012_10_12_13_11_07_066554200
++ cd 2012_10_12_13_11_07_066554200
++ touch out.dat
++ env
++ echo 2012_10_12_13_11_07_066554200
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=16 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=16
++ '[' 16 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_11_38_239595983
++ mkdir 2012_10_12_13_11_38_239595983
++ cd 2012_10_12_13_11_38_239595983
++ touch out.dat
++ env
++ echo 2012_10_12_13_11_38_239595983
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=256 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_12_16_316563678
++ mkdir 2012_10_12_13_12_16_316563678
++ cd 2012_10_12_13_12_16_316563678
++ touch out.dat
++ env
++ echo 2012_10_12_13_12_16_316563678
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=224 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_12_54_443999944
++ mkdir 2012_10_12_13_12_54_443999944
++ cd 2012_10_12_13_12_54_443999944
++ touch out.dat
++ env
++ echo 2012_10_12_13_12_54_443999944
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=192 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_13_32_354590769
++ mkdir 2012_10_12_13_13_32_354590769
++ cd 2012_10_12_13_13_32_354590769
++ touch out.dat
++ env
++ echo 2012_10_12_13_13_32_354590769
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=160 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_14_08_513945909
++ mkdir 2012_10_12_13_14_08_513945909
++ cd 2012_10_12_13_14_08_513945909
++ touch out.dat
++ env
++ echo 2012_10_12_13_14_08_513945909
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=128 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_14_41_519174612
++ mkdir 2012_10_12_13_14_41_519174612
++ cd 2012_10_12_13_14_41_519174612
++ touch out.dat
++ env
++ echo 2012_10_12_13_14_41_519174612
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=96 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_15_15_083564110
++ mkdir 2012_10_12_13_15_15_083564110
++ cd 2012_10_12_13_15_15_083564110
++ touch out.dat
++ env
++ echo 2012_10_12_13_15_15_083564110
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_15_47_630292657
++ mkdir 2012_10_12_13_15_47_630292657
++ cd 2012_10_12_13_15_47_630292657
++ touch out.dat
++ env
++ echo 2012_10_12_13_15_47_630292657
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=32 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=32
++ '[' 32 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_16_20_142513911
++ mkdir 2012_10_12_13_16_20_142513911
++ cd 2012_10_12_13_16_20_142513911
++ touch out.dat
++ env
++ echo 2012_10_12_13_16_20_142513911
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=512 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_16_59_674066903
++ mkdir 2012_10_12_13_16_59_674066903
++ cd 2012_10_12_13_16_59_674066903
++ touch out.dat
++ env
++ echo 2012_10_12_13_16_59_674066903
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=448 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_17_39_390151027
++ mkdir 2012_10_12_13_17_39_390151027
++ cd 2012_10_12_13_17_39_390151027
++ touch out.dat
++ env
++ echo 2012_10_12_13_17_39_390151027
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=384 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_18_17_660944802
++ mkdir 2012_10_12_13_18_17_660944802
++ cd 2012_10_12_13_18_17_660944802
++ touch out.dat
++ env
++ echo 2012_10_12_13_18_17_660944802
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=320 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_18_54_965188839
++ mkdir 2012_10_12_13_18_54_965188839
++ cd 2012_10_12_13_18_54_965188839
++ touch out.dat
++ env
++ echo 2012_10_12_13_18_54_965188839
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=256 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_19_27_906537162
++ mkdir 2012_10_12_13_19_27_906537162
++ cd 2012_10_12_13_19_27_906537162
++ touch out.dat
++ env
++ echo 2012_10_12_13_19_27_906537162
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=192 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_20_00_770086750
++ mkdir 2012_10_12_13_20_00_770086750
++ cd 2012_10_12_13_20_00_770086750
++ touch out.dat
++ env
++ echo 2012_10_12_13_20_00_770086750
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=128 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_20_33_312594082
++ mkdir 2012_10_12_13_20_33_312594082
++ cd 2012_10_12_13_20_33_312594082
++ touch out.dat
++ env
++ echo 2012_10_12_13_20_33_312594082
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=64
++ '[' 64 -le 32 ']'
++ for pkg in 0x38198 0x038208 0x038280 0x0382f8
++ i=16
++ j=4
++ export MSR_PKG_POWER_LIMIT=0x0382f8
++ MSR_PKG_POWER_LIMIT=0x0382f8
++ '[' 4 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_21_04_751096230
++ mkdir 2012_10_12_13_21_04_751096230
++ cd 2012_10_12_13_21_04_751096230
++ touch out.dat
++ env
++ echo 2012_10_12_13_21_04_751096230
++ uname -a
++ grep MHz
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_21_39_516872301
++ mkdir 2012_10_12_13_21_39_516872301
++ cd 2012_10_12_13_21_39_516872301
++ touch out.dat
++ env
++ echo 2012_10_12_13_21_39_516872301
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=56 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_22_13_632864309
++ mkdir 2012_10_12_13_22_13_632864309
++ cd 2012_10_12_13_22_13_632864309
++ touch out.dat
++ env
++ echo 2012_10_12_13_22_13_632864309
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=48 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_22_48_479648674
++ mkdir 2012_10_12_13_22_48_479648674
++ cd 2012_10_12_13_22_48_479648674
++ touch out.dat
++ env
++ echo 2012_10_12_13_22_48_479648674
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=40 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_23_23_172936738
++ mkdir 2012_10_12_13_23_23_172936738
++ cd 2012_10_12_13_23_23_172936738
++ touch out.dat
++ env
++ echo 2012_10_12_13_23_23_172936738
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=32 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_23_56_000333905
++ mkdir 2012_10_12_13_23_56_000333905
++ cd 2012_10_12_13_23_56_000333905
++ touch out.dat
++ env
++ echo 2012_10_12_13_23_56_000333905
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=24 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_24_28_882786866
++ mkdir 2012_10_12_13_24_28_882786866
++ cd 2012_10_12_13_24_28_882786866
++ touch out.dat
++ env
++ echo 2012_10_12_13_24_28_882786866
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=16 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_25_00_908504421
++ mkdir 2012_10_12_13_25_00_908504421
++ cd 2012_10_12_13_25_00_908504421
++ touch out.dat
++ env
++ echo 2012_10_12_13_25_00_908504421
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 4
++ echo 'turbo: ' 1
++ srun --nodes=4 --ntasks=8 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=8
++ '[' 8 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_25_33_266961009
++ mkdir 2012_10_12_13_25_33_266961009
++ cd 2012_10_12_13_25_33_266961009
++ touch out.dat
++ env
++ echo 2012_10_12_13_25_33_266961009
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=128 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_26_08_504511815
++ mkdir 2012_10_12_13_26_08_504511815
++ cd 2012_10_12_13_26_08_504511815
++ touch out.dat
++ env
++ echo 2012_10_12_13_26_08_504511815
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=112 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_26_43_576737617
++ mkdir 2012_10_12_13_26_43_576737617
++ cd 2012_10_12_13_26_43_576737617
++ touch out.dat
++ env
++ echo 2012_10_12_13_26_43_576737617
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=96 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_27_18_475680980
++ mkdir 2012_10_12_13_27_18_475680980
++ cd 2012_10_12_13_27_18_475680980
++ touch out.dat
++ env
++ echo 2012_10_12_13_27_18_475680980
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=80 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_27_53_287603345
++ mkdir 2012_10_12_13_27_53_287603345
++ cd 2012_10_12_13_27_53_287603345
++ touch out.dat
++ env
++ echo 2012_10_12_13_27_53_287603345
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_28_26_020416883
++ mkdir 2012_10_12_13_28_26_020416883
++ cd 2012_10_12_13_28_26_020416883
++ touch out.dat
++ env
++ echo 2012_10_12_13_28_26_020416883
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=48 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_28_58_728631230
++ mkdir 2012_10_12_13_28_58_728631230
++ cd 2012_10_12_13_28_58_728631230
++ touch out.dat
++ env
++ echo 2012_10_12_13_28_58_728631230
++ uname -a
++ grep MHz
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=32 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_29_30_806151764
++ mkdir 2012_10_12_13_29_30_806151764
++ cd 2012_10_12_13_29_30_806151764
++ touch out.dat
++ env
++ echo 2012_10_12_13_29_30_806151764
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 8
++ echo 'turbo: ' 1
++ srun --nodes=8 --ntasks=16 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=16
++ '[' 16 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_30_02_567913830
++ mkdir 2012_10_12_13_30_02_567913830
++ cd 2012_10_12_13_30_02_567913830
++ touch out.dat
++ env
++ echo 2012_10_12_13_30_02_567913830
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=256 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_30_37_959586752
++ mkdir 2012_10_12_13_30_37_959586752
++ cd 2012_10_12_13_30_37_959586752
++ touch out.dat
++ env
++ echo 2012_10_12_13_30_37_959586752
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=224 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_31_13_486825898
++ mkdir 2012_10_12_13_31_13_486825898
++ cd 2012_10_12_13_31_13_486825898
++ touch out.dat
++ env
++ echo 2012_10_12_13_31_13_486825898
++ uname -a
++ grep MHz
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=192 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_31_48_828429349
++ mkdir 2012_10_12_13_31_48_828429349
++ cd 2012_10_12_13_31_48_828429349
++ touch out.dat
++ env
++ echo 2012_10_12_13_31_48_828429349
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=160 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_32_23_389715287
++ mkdir 2012_10_12_13_32_23_389715287
++ cd 2012_10_12_13_32_23_389715287
++ touch out.dat
++ env
++ echo 2012_10_12_13_32_23_389715287
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=128 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_32_56_726662795
++ mkdir 2012_10_12_13_32_56_726662795
++ cd 2012_10_12_13_32_56_726662795
++ touch out.dat
++ env
++ echo 2012_10_12_13_32_56_726662795
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=96 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_33_29_934565744
++ mkdir 2012_10_12_13_33_29_934565744
++ cd 2012_10_12_13_33_29_934565744
++ touch out.dat
++ env
++ echo 2012_10_12_13_33_29_934565744
++ uname -a
++ grep MHz
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_34_01_905731844
++ mkdir 2012_10_12_13_34_01_905731844
++ cd 2012_10_12_13_34_01_905731844
++ touch out.dat
++ env
++ echo 2012_10_12_13_34_01_905731844
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 16
++ echo 'turbo: ' 1
++ srun --nodes=16 --ntasks=32 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=32
++ '[' 32 -le 32 ']'
++ i=16
++ '[' 16 -ge 2 ']'
++ export MSR_RANK_MOD=16
++ MSR_RANK_MOD=16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_34_33_853980010
++ mkdir 2012_10_12_13_34_33_853980010
++ cd 2012_10_12_13_34_33_853980010
++ touch out.dat
++ env
++ echo 2012_10_12_13_34_33_853980010
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 16'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=512 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=14
++ '[' 14 -ge 2 ']'
++ export MSR_RANK_MOD=14
++ MSR_RANK_MOD=14
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_35_11_508553389
++ mkdir 2012_10_12_13_35_11_508553389
++ cd 2012_10_12_13_35_11_508553389
++ touch out.dat
++ env
++ echo 2012_10_12_13_35_11_508553389
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 14'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=448 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=12
++ '[' 12 -ge 2 ']'
++ export MSR_RANK_MOD=12
++ MSR_RANK_MOD=12
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_35_48_246887353
++ mkdir 2012_10_12_13_35_48_246887353
++ cd 2012_10_12_13_35_48_246887353
++ touch out.dat
++ env
++ echo 2012_10_12_13_35_48_246887353
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 12'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=384 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=10
++ '[' 10 -ge 2 ']'
++ export MSR_RANK_MOD=10
++ MSR_RANK_MOD=10
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_36_24_214662625
++ mkdir 2012_10_12_13_36_24_214662625
++ cd 2012_10_12_13_36_24_214662625
++ touch out.dat
++ env
++ echo 2012_10_12_13_36_24_214662625
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 10'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=320 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=8
++ '[' 8 -ge 2 ']'
++ export MSR_RANK_MOD=8
++ MSR_RANK_MOD=8
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_37_00_573533755
++ mkdir 2012_10_12_13_37_00_573533755
++ cd 2012_10_12_13_37_00_573533755
++ touch out.dat
++ env
++ echo 2012_10_12_13_37_00_573533755
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 8'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=256 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=6
++ '[' 6 -ge 2 ']'
++ export MSR_RANK_MOD=6
++ MSR_RANK_MOD=6
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_37_33_702574591
++ mkdir 2012_10_12_13_37_33_702574591
++ cd 2012_10_12_13_37_33_702574591
++ touch out.dat
++ env
++ echo 2012_10_12_13_37_33_702574591
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 6'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=192 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=4
++ '[' 4 -ge 2 ']'
++ export MSR_RANK_MOD=4
++ MSR_RANK_MOD=4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_38_07_033418742
++ mkdir 2012_10_12_13_38_07_033418742
++ cd 2012_10_12_13_38_07_033418742
++ touch out.dat
++ env
++ echo 2012_10_12_13_38_07_033418742
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 4'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=128 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=2
++ '[' 2 -ge 2 ']'
++ export MSR_RANK_MOD=2
++ MSR_RANK_MOD=2
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_10_12_13_38_39_413489696
++ mkdir 2012_10_12_13_38_39_413489696
++ cd 2012_10_12_13_38_39_413489696
++ touch out.dat
++ env
++ echo 2012_10_12_13_38_39_413489696
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ srun --nodes=1 --ntasks=1 -o host_info hostname
++ echo 'tasks/node: 2'
++ echo 'nodes: ' 32
++ echo 'turbo: ' 1
++ srun --nodes=32 --ntasks=64 -o out.dat -e f.err ../mpi-spin 2
++ cd ../
++ i=0
++ '[' 0 -ge 2 ']'
++ j=64
++ '[' 64 -le 32 ']'

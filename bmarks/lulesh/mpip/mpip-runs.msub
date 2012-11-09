@@ -1,0 +1,46 @@
+#!/bin/bash
+#MSUB -lpartition=cab
+#MSUB -A asccasc
+#MSUB -l nodes=125
+#MSUB -q pbatch
+#MSUB -l walltime=05:30:00
+
+i=16
+minthreads=4
+size=120
+
+j=2
+nodes=8
+maxnodes=125
+
+while [ $nodes -lt $maxnodes ]
+do
+i=16
+while [ $i -ge $minthreads ]
+do
+	export OMP_NUM_THREADS=$i
+
+	nodes=$(($j*$j*$j))	
+
+	name=`date +%Y_%m_%d_%H_%M_%S_%N`
+	mkdir $name
+	cd $name
+	env > env
+	echo $name >> info
+	uname -a >> info
+	srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo | grep MHz >> info
+	srun --nodes=1 --ntasks=1 -o host_info hostname
+	echo 'threads/node: '$i >> info
+	echo 'nodes: ' $nodes >> info
+
+	sz=$(($size/($j-1)))	
+	
+	srun-mpip --nodes=$nodes --ntasks=$nodes -e f.err -o out.dat ../../luleshMPI_OMP $sz time.out 
+
+	cd ../
+
+	i=$(($i-4))
+done
+	j=$(($j+1))
+done
+

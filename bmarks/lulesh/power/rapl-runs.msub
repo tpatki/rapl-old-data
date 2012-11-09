@@ -1,0 +1,66 @@
+#!/bin/bash
+#MSUB -lpartition=cab
+#MSUB -A lc
+#MSUB -l nodes=125
+#MSUB -q pbatch
+#MSUB -l walltime=08:30:00
+
+i=16
+minthreads=4
+size=120
+
+j=2
+nodes=8
+maxnodes=125
+
+
+export READ_WRITE=1
+ export PKG_MINW_MINS=0x38198
+export PP0_MINW_MINS=0x38198
+export DRAM_MINW_MINS=0x38078
+export MSR_PKG_POWER_LIMIT=0x0
+export MSR_PP0_POWER_LIMIT=0x0
+export MSR_DRAM_POWER_LIMIT=0x0
+export MSR_RANK_MOD=1 #One task per node, the rest are threads
+
+#51, 65, 80 and 95W. Smallest time window.
+ 
+for pkg in 0x38198 0x038208 0x038280 0x0382f8
+i=16
+j=2
+nodes=8
+do
+export MSR_PKG_POWER_LIMIT=${pkg}
+
+
+while [ $nodes -lt $maxnodes ]
+do
+i=16
+while [ $i -ge $minthreads ]
+do
+	export OMP_NUM_THREADS=$i
+
+	nodes=$(($j*$j*$j))	
+
+	name=`date +%Y_%m_%d_%H_%M_%S_%N`
+	mkdir $name
+	cd $name
+	env > env
+	echo $name >> info
+	uname -a >> info
+	srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo | grep MHz >> info
+	srun --nodes=1 --ntasks=1 -o host_info hostname
+	echo 'threads/node: '$i >> info
+	echo 'nodes: ' $nodes >> info
+
+	sz=$(($size/($j-1)))	
+	
+	srun --nodes=$nodes --ntasks=$nodes -e f.err -o out.dat ../../luleshMPI_OMP $sz time.out 
+
+	cd ../
+
+	i=$(($i-2))
+done
+	j=$(($j+1))
+done
+done

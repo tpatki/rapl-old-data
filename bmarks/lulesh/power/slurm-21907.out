@@ -1,0 +1,54 @@
+srun: error: rzmerl96: task 0: Exited with exit code 255
+srun: First task exited 30s ago
+srun: tasks 1-7: running
+srun: task 0: exited abnormally
+srun: Terminating job step 21907.2
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+srun: error: rzmerl96: task 0: Exited with exit code 255
+srun: First task exited 30s ago
+srun: tasks 1-7: running
+srun: task 0: exited abnormally
+srun: Terminating job step 21907.5
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+srun: error: rzmerl96: task 0: Exited with exit code 255
+srun: First task exited 30s ago
+srun: tasks 1-7: running
+srun: task 0: exited abnormally
+srun: Terminating job step 21907.8
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+srun: error: rzmerl97: task 0: Exited with exit code 255
+srun: First task exited 30s ago
+srun: tasks 1-7: running
+srun: task 0: exited abnormally
+srun: Terminating job step 21907.11
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+srun: error: rzmerl96: task 0: Exited with exit code 255
+srun: First task exited 30s ago
+srun: tasks 1-7: running
+srun: task 0: exited abnormally
+srun: Terminating job step 21907.14
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+srun: error: rzmerl96: task 0: Exited with exit code 255
+srun: First task exited 30s ago
+srun: tasks 1-26: running
+srun: task 0: exited abnormally
+srun: Terminating job step 21907.23
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+srun: error: rzmerl96: task 0: Exited with exit code 255
+srun: First task exited 30s ago
+srun: tasks 1-26: running
+srun: task 0: exited abnormally
+srun: Terminating job step 21907.26
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+srun: error: rzmerl96: task 0: Exited with exit code 255
+srun: First task exited 30s ago
+srun: tasks 1-26: running
+srun: task 0: exited abnormally
+srun: Terminating job step 21907.29
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+srun: error: rzmerl96: task 0: Exited with exit code 255
+srun: First task exited 30s ago
+srun: tasks 1-26: running
+srun: task 0: exited abnormally
+srun: Terminating job step 21907.32
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.

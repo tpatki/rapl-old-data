@@ -1,0 +1,8 @@
+Lulesh (MPI/OMP)
+  Elements: 1728000 (120 x 120 x 120)
+srun: error: cab41: task 0: Exited with exit code 255
+srun: First task exited 30s ago
+srun: tasks 1-7: running
+srun: task 0: exited abnormally
+srun: Terminating job step 933169.0
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.

@@ -1,0 +1,13 @@
+#!/bin/bash
+#MSUB -lpartition=cab
+#MSUB -A asccasc
+#MSUB -l nodes=8
+#MSUB -q pbatch
+#MSUB -l walltime=00:20:00
+
+#Call the child script that does the runs
+
+
+export OMP_NUM_THREADS=16
+#./runSP-MZ.sh 4 256 16 16 
+srun --nodes=8 --ntasks=8 -e lulesh.err -o l.out ./luleshMPI_OMP

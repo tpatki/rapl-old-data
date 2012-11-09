@@ -1,0 +1,71 @@
+#!/bin/bash
+#MSUB -lpartition=cab
+#MSUB -A lc
+#MSUB -l nodes=2
+#MSUB -q pbatch
+#MSUB -l walltime=00:10:00
+
+set -x
+
+i=8
+minthreads=8
+
+j=2
+maxnodes=2
+
+export PKG_MINW_MINS=0x38198
+export PP0_MINW_MINS=0x38198
+export DRAM_MINW_MINS=0x38078
+export MSR_PKG_POWER_LIMIT=0x0
+export MSR_PP0_POWER_LIMIT=0x0
+export MSR_DRAM_POWER_LIMIT=0x0
+export MSR_RANK_MOD=1 #Onetask per node, the rest are threads
+export SAMPLE=1
+
+t=0
+
+for t in 0 1
+do
+
+export TURBO_ENABLE=$t
+
+#unbounded measurement
+export READ_WRITE=0
+export READ_ONLY=1
+
+i=8
+j=2
+        while [ $j -le $maxnodes ]
+        do
+        i=8
+        while [ $i -ge $minthreads ]
+        do
+#                export OMP_NUM_THREADS=$i
+                export MSR_RANK_MOD=$i
+                name=`date +%Y_%m_%d_%H_%M_%S_%N`
+                mkdir $name
+                cd $name
+                touch out.dat
+                env > env
+                echo $name >> info
+                uname -a >> info
+                srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo | grep MHz >> info
+                srun --nodes=1 --ntasks=1 -o host_info hostname
+                echo 'tasks/node: '$i >> info
+                echo 'nodes: ' $j >> info
+		echo 'turbo: ' $t >>info
+
+               srun --nodes=$j --ntasks=$(($j * $i)) -o out.dat -e f.err ../mpi-spin 1
+
+
+                cd ../
+
+                i=$(($i-2))
+        done
+        j=$(($j*2))
+        done
+
+
+done
+
+

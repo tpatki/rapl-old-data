@@ -1,0 +1,8 @@
+slurmd[cab59]: execve(): ../../luleshMPI_OMP: No such file or directory
+slurmd[cab162]: execve(): ../../luleshMPI_OMP: No such file or directory
+slurmd[cab154]: execve(): ../../luleshMPI_OMP: No such file or directory
+slurmd[cab127]: execve(): ../../luleshMPI_OMP: No such file or directory
+slurmd[cab185]: execve(): ../../luleshMPI_OMP: No such file or directory
+slurmd[cab259]: execve(): ../../luleshMPI_OMP: No such file or directory
+slurmd[cab200]: execve(): ../../luleshMPI_OMP: No such file or directory
+slurmd[cab210]: execve(): ../../luleshMPI_OMP: No such file or directory

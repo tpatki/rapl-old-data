@@ -1,0 +1,109 @@
+
+In READ-WRITE mode.
+
+In READ-WRITE mode.
+
+In READ-WRITE mode.
+
+In READ-WRITE mode.
+
+In READ-WRITE mode.
+
+In READ-WRITE mode.
+
+In READ-WRITE mode.
+
+In READ-WRITE mode.
+
+In READ-WRITE mode.
+
+In READ-WRITE mode.
+
+In READ-WRITE mode.
+
+In READ-WRITE mode.
+
+In READ-WRITE mode.
+
+In READ-WRITE mode.
+
+In READ-WRITE mode.
+
+In READ-WRITE mode.
+
+
+ NAS Parallel Benchmarks (NPB3.3-MZ-MPI) - BT-MZ MPI+OpenMP Benchmark
+
+ Number of zones:  16 x  16
+ Iterations: 300    dt:   0.000100
+ Number of active processes:    16
+
+ Use the default load factors with threads
+ Total number of threads:    256  ( 16.0 threads/process)
+
+ Calculated speedup =    255.55
+
+ Time step    1
+ Time step   20
+ Time step   40
+ Time step   60
+ Time step   80
+ Time step  100
+ Time step  120
+ Time step  140
+ Time step  160
+ Time step  180
+ Time step  200
+ Time step  220
+ Time step  240
+ Time step  260
+ Time step  280
+ Time step  300
+ Verification being performed for class C
+ accuracy setting for epsilon =  0.1000000000000E-07
+ NITER does not match the reference value of   200
+ Comparison of RMS-norms of residual
+ FAILURE:  1 0.2447590554525E+07 0.3457703287806E+07 0.2921340118580E+00
+ FAILURE:  2 0.2172367663064E+06 0.3213621375929E+06 0.3240125674618E+00
+ FAILURE:  3 0.4838646771596E+06 0.7002579656870E+06 0.3090193887550E+00
+ FAILURE:  4 0.3131226329593E+06 0.4517459627471E+06 0.3068612477349E+00
+ FAILURE:  5 0.2074090640893E+07 0.2818715870791E+07 0.2641717945447E+00
+ Comparison of RMS-norms of solution error
+ FAILURE:  1 0.1814886732408E+06 0.2059106993570E+06 0.1186049398721E+00
+ FAILURE:  2 0.1483527054902E+05 0.1680761129461E+05 0.1173480699320E+00
+ FAILURE:  3 0.3617162586458E+05 0.4080731640795E+05 0.1135994951745E+00
+ FAILURE:  4 0.2500036711165E+05 0.2836541076778E+05 0.1186319381617E+00
+ FAILURE:  5 0.1917531880840E+06 0.2136807610771E+06 0.1026183774457E+00
+ Verification failed
+
+
+ BT-MZ Benchmark Completed.
+ Class           =                        C
+ Size            =            480x  320x 28
+ Iterations      =                      300
+ Time in seconds =                     9.75
+ Total processes =                       16
+ Total threads   =                      256
+ Mop/s total     =                373296.37
+ Mop/s/thread    =                  1458.19
+ Operation type  =           floating point
+ Verification    =             UNSUCCESSFUL
+ Version         =                    3.3.1
+ Compile date    =              27 Jul 2012
+
+ Compile options:
+    F77          = mpif77
+    FLINK        = $(F77)
+    F_LIB        = -Xlinker -rpath -Xlinker $(HOME)/local/src/...
+    F_INC        = (none)
+    FFLAGS       = -O3 -openmp -fPIC -DPIC 
+    FLINKFLAGS   = -O3  -openmp 
+    RAND         = (none)
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+

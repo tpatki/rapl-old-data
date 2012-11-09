@@ -1,0 +1,36 @@
+
+;; Function allocdyn (allocdyn_)
+
+(note 1 0 3 NOTE_INSN_DELETED)
+
+(note 3 1 13 [bb 2] NOTE_INSN_BASIC_BLOCK)
+
+(insn/f 13 3 14 allocdyn.f:3 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [0 S8 A8])
+        (reg/f:DI 6 bp)) -1 (nil))
+
+(insn/f 14 13 15 allocdyn.f:3 (set (reg/f:DI 6 bp)
+        (reg/f:DI 7 sp)) -1 (nil))
+
+(note 15 14 2 NOTE_INSN_PROLOGUE_END)
+
+(note 2 15 16 NOTE_INSN_FUNCTION_BEG)
+
+(note 16 2 17 NOTE_INSN_EPILOGUE_BEG)
+
+(insn/f 17 16 18 allocdyn.f:20 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 6 bp)
+                    (const_int 8 [0x8])))
+            (set (reg/f:DI 6 bp)
+                (mem:DI (reg/f:DI 6 bp) [0 S8 A8]))
+            (clobber (mem:BLK (scratch) [0 A8]))
+        ]) -1 (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:DI 7 sp)
+            (plus:DI (reg/f:DI 6 bp)
+                (const_int 8 [0x8])))
+        (nil)))
+
+(jump_insn 18 17 19 allocdyn.f:20 (return) -1 (nil))
+
+(barrier 19 18 12)
+
+(note 12 19 0 NOTE_INSN_DELETED)
